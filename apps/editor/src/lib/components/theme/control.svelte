@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ThemeSelect from '$lib/components/theme-select.svelte'
-  import ThemeToggleButton from '$lib/components/theme-toggle-button.svelte'
+  import Select from './select.svelte'
+  import Toggle from './toggle.svelte'
 </script>
 
 <!--
@@ -12,12 +12,12 @@ or select a specific named theme.
 
 <div class="join ring-1 ring-base-content">
   <div class="join-item rounded-r-0">
-    <ThemeToggleButton class="rounded-r-none" />
+    <Toggle class="rounded-r-none" />
   </div>
 
   <div class="divider divider-horizontal join-item m-0 w-0"></div>
 
   <div class="join-item">
-    <ThemeSelect triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
+    <Select triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
   </div>
 </div>

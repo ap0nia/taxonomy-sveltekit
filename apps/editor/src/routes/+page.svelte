@@ -1,11 +1,11 @@
 <script lang="ts">
-  import ThemeControl from '$lib/components/theme-control.svelte'
-  import ThemeWatcher from '$lib/components/theme-watcher.svelte'
+  import ThemeControl from '$lib/components/theme/control.svelte'
+  import ThemeWatcher from '$lib/components/theme/watcher.svelte'
 </script>
 
 <ThemeWatcher />
 
-<div class="p-8">
+<div class="p-2">
   <ThemeControl />
 </div>
 
