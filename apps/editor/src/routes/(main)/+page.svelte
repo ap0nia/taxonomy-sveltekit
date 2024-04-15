@@ -1,14 +1,3 @@
-<script lang="ts">
-  import ThemeControl from '$lib/components/theme/control.svelte'
-  import ThemeWatcher from '$lib/components/theme/watcher.svelte'
-</script>
-
-<ThemeWatcher />
-
-<div class="p-2">
-  <ThemeControl />
-</div>
-
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content text-center">
     <div class="max-w-md">

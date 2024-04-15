@@ -1,6 +1,23 @@
 import { get, writable } from 'svelte/store'
 
-export const theme = writable({ value: '', label: '' })
+function createThemeStore() {
+  const store = writable({ value: '', label: '' })
+
+  const set = (value: { label: string; value: string }) => {
+    store.set(value)
+
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute(DATA_THEME_ATTRIBUTE, value.value)
+    }
+  }
+
+  return {
+    ...store,
+    set,
+  }
+}
+
+export const theme = createThemeStore()
 
 export const themes = {
   light: 'light',
