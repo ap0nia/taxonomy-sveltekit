@@ -68,5 +68,9 @@
     "typescript-svelte-plugin": "^0.3.37",
     "unplugin-icons": "^0.18.5",
     "vite": "^5.2.8"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2"
   }
 }
