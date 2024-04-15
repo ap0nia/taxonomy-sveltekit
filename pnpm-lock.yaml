@@ -97,6 +97,12 @@ importers:
       '@taxonomy/ui':
         specifier: workspace:^
         version: link:../../packages/ui
+      bits-ui:
+        specifier: ^0.21.3
+        version: 0.21.3(svelte@4.2.13)
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
       drizzle-orm:
         specifier: ^0.30.8
         version: 0.30.8(@libsql/client@0.6.0)
@@ -106,6 +112,9 @@ importers:
       elysia:
         specifier: ^1.0.13
         version: 1.0.13(@sinclair/typebox@0.32.20)(typescript@5.1.6)
+      js-cookie:
+        specifier: ^3.0.5
+        version: 3.0.5
       mode-watcher:
         specifier: ^0.3.0
         version: 0.3.0(svelte@4.2.13)
@@ -146,6 +155,9 @@ importers:
       '@types/grecaptcha':
         specifier: ^3.0.9
         version: 3.0.9
+      '@types/js-cookie':
+        specifier: ^3.0.6
+        version: 3.0.6
       '@types/nodemailer':
         specifier: ^6.4.14
         version: 6.4.14
@@ -4948,6 +4960,13 @@ packages:
       }
     dev: true
 
+  /@types/js-cookie@3.0.6:
+    resolution:
+      {
+        integrity: sha512-wkw9yd1kEXOPnvEeEV1Go1MmxtBJL0RR79aOTAApecWFVu7w0NNXNqhcWgvw2YgZDYadliXkl14pa3WXw5jlCQ==,
+      }
+    dev: true
+
   /@types/json-schema@7.0.15:
     resolution:
       {
@@ -8852,6 +8871,14 @@ packages:
       {
         integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==,
       }
+    dev: false
+
+  /js-cookie@3.0.5:
+    resolution:
+      {
+        integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==,
+      }
+    engines: { node: '>=14' }
     dev: false
 
   /js-tokens@4.0.0:
