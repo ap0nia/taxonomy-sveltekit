@@ -1,0 +1,21 @@
+{
+  "name": "@taxonomy/prettier-config",
+  "version": "0.0.0",
+  "description": "shared prettier config",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ap0nia/taxonomy",
+    "directory": "packages/prettier"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "devDependencies": {
+    "@taxonomy/tsconfig": "workspace:^",
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.13"
+  }
+}

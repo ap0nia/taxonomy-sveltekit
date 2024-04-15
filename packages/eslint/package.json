@@ -1,0 +1,31 @@
+{
+  "name": "@taxonomy/eslint-config",
+  "version": "0.0.0",
+  "description": "shared eslint config",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ap0nia/taxonomy",
+    "directory": "packages/eslint"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@taxonomy/tsconfig": "workspace:^",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-svelte": "2.36.0-next.13",
+    "globals": "^15.0.0",
+    "svelte": "^4.2.13",
+    "svelte-eslint-parser": "^0.33.1",
+    "typescript-eslint": "^7.4.0"
+  }
+}
