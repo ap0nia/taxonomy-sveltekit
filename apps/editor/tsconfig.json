@@ -1,0 +1,10 @@
+{
+  "extends": ["@taxonomy/tsconfig", "./.svelte-kit/tsconfig.json"],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-svelte-plugin"
+      }
+    ]
+  }
+}
