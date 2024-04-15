@@ -1,14 +1,8 @@
 <script lang="ts">
   import Cookie from 'js-cookie'
-  import { ModeWatcher, setMode } from 'mode-watcher'
+  import { mode, ModeWatcher, setMode } from 'mode-watcher'
 
-  import {
-    DEFAULT_THEME_KEY,
-    setModeFromTheme,
-    theme,
-    THEME_CONSTANTS,
-    themes,
-  } from '$lib/config/themes'
+  import { setModeFromTheme, theme, THEME_CONSTANTS, THEME_KEY, themes } from '$lib/config/themes'
 
   /**
    * Inline function that runs when the page loads to initialize
@@ -22,10 +16,16 @@
    */
   const initializationArgs = JSON.stringify(THEME_CONSTANTS)
 
+  const initializationCall = `(${initializationFunction})(${initializationArgs})`
+
   /**
    * Whenever theme changes, derive the mode for mode-watcher.
    */
   $: themeMode = themes[$theme.value as keyof typeof themes]
+
+  $: if ($mode != null && !$theme.value) {
+    theme.set({ value: $mode, label: $mode })
+  }
 
   /**
    * Update mode-watcher's mode accordingly.
@@ -35,11 +35,9 @@
   }
 
   /**
-   * Update the stored theme cookie whenever the theme changes.
+   * Update the stored theme cookie whenever the theme store changes.
    */
-  $: Cookie.set(DEFAULT_THEME_KEY, $theme.value, { expires: 365 })
-
-  const initializationCall = `(${initializationFunction})(${initializationArgs})`
+  $: Cookie.set(THEME_KEY, $theme.value, { expires: 365 })
 </script>
 
 <ModeWatcher />

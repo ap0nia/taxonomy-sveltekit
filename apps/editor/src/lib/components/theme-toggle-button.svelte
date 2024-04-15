@@ -4,7 +4,7 @@
 
   import MoonIcon from '~icons/radix-icons/moon'
   import SunIcon from '~icons/radix-icons/sun'
-  import { setThemeFromMode, theme } from '$lib/config/themes'
+  import { setThemeFromMode } from '$lib/config/themes'
   import { cn } from '$lib/utils/cn'
 
   interface $$Props extends HTMLButtonAttributes {}
@@ -18,12 +18,7 @@
    */
   function handleModeToggle() {
     toggleMode()
-
     setThemeFromMode($mode)
-
-    if ($mode) {
-      theme.set({ label: $mode, value: $mode })
-    }
   }
 </script>
 

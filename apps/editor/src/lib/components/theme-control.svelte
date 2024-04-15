@@ -18,6 +18,6 @@ or select a specific named theme.
   <div class="divider divider-horizontal join-item m-0 w-0"></div>
 
   <div class="join-item">
-    <ThemeSelect triggerClasses="ring-0 rounded-l-none" />
+    <ThemeSelect triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
   </div>
 </div>

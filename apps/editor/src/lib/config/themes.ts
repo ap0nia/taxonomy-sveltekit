@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { get, writable } from 'svelte/store'
 
 export const theme = writable({ value: '', label: '' })
 
@@ -41,7 +41,19 @@ export const themes = {
  * The default key used by theme-change in localstorage.
  * @see https://github.com/saadeghi/theme-change/blob/master/src/toggle.js
  */
-export const DEFAULT_THEME_KEY = 'theme'
+export const THEME_KEY = 'theme'
+
+/**
+ * After a user selects a specific light theme,
+ * toggling light mode will use this theme instead of the default light theme.
+ */
+export const LIGHT_THEME_KEY = 'light-theme'
+
+/**
+ * After a user selects a specific dark theme,
+ * toggling dark mode will use this theme instead of the default dark theme.
+ */
+export const DARK_THEME_KEY = 'dark-theme'
 
 export const TOGGLE_ELEMENT_SELECTOR = '[data-toggle-theme]'
 
@@ -59,12 +71,59 @@ export const MODE_WATCHER_KEY = 'mode-watcher-mode'
  */
 export const THEME_CONSTANTS = {
   themes,
-  DEFAULT_THEME_KEY,
+  DEFAULT_THEME_KEY: THEME_KEY,
   TOGGLE_ELEMENT_SELECTOR,
   TOGGLE_ELEMENT_DATA_KEY,
   DATA_THEME_ATTRIBUTE,
   MODE_WATCHER_KEY,
 }
+
+function createModeThemeStore() {
+  const store = writable({ light: '', dark: '' }, (_set, update) => {
+    if (typeof document === 'undefined') return
+
+    const lightTheme = localStorage.getItem(LIGHT_THEME_KEY)
+
+    const darkTheme = localStorage.getItem(DARK_THEME_KEY)
+
+    update((value) => {
+      if (lightTheme != null) {
+        value.light = lightTheme
+      }
+
+      if (darkTheme != null) {
+        value.dark = darkTheme
+      }
+
+      return value
+    })
+
+    const unsubscribe = theme.subscribe((value) => {
+      const modeTheme = themes[value.value as keyof typeof themes]
+
+      if (modeTheme == null) return
+
+      const key = modeTheme === 'dark' ? DARK_THEME_KEY : LIGHT_THEME_KEY
+
+      localStorage.setItem(key, value.value)
+
+      update((v) => {
+        v[modeTheme] = value.value
+        return v
+      })
+    })
+
+    return () => {
+      unsubscribe()
+    }
+  })
+
+  return {
+    ...store,
+  }
+}
+
+export const modeTheme = createModeThemeStore()
 
 /**
  * Infers the DaisyUI theme based on the current mode for mode-watcher.
@@ -78,7 +137,7 @@ export function setThemeFromMode(currentMode?: string) {
 
   const customKey = toggleElement ? toggleElement.getAttribute(TOGGLE_ELEMENT_DATA_KEY) : null
 
-  const key = customKey ?? DEFAULT_THEME_KEY
+  const key = customKey ?? THEME_KEY
 
   const mode = currentMode ?? localStorage.getItem(MODE_WATCHER_KEY) ?? 'system'
 
@@ -86,11 +145,17 @@ export function setThemeFromMode(currentMode?: string) {
     mode === 'light' ||
     (mode === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches)
 
-  const themeName = isLightModel ? 'light' : 'dark'
+  const currentModeTheme = get(modeTheme)
+
+  const themeName = isLightModel
+    ? currentModeTheme.light || 'light'
+    : currentModeTheme.dark || 'dark'
 
   document.documentElement.setAttribute(DATA_THEME_ATTRIBUTE, themeName)
 
   localStorage.setItem(key, themeName)
+
+  theme.set({ label: themeName, value: themeName })
 }
 
 /**
