@@ -94,6 +94,9 @@ importers:
       '@tanstack/svelte-query':
         specifier: ^5.29.0
         version: 5.29.0(svelte@4.2.13)
+      '@taxonomy/ui':
+        specifier: workspace:^
+        version: link:../../packages/ui
       drizzle-orm:
         specifier: ^0.30.8
         version: 0.30.8(@libsql/client@0.6.0)

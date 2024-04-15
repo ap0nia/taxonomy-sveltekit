@@ -1,7 +1,7 @@
 // @ts-check
 
 import typography from '@tailwindcss/typography'
-// import uiConfig from '@taxonomy/ui/tailwind.config'
+import uiConfig from '@taxonomy/ui/tailwind.config'
 
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
@@ -12,15 +12,15 @@ const defaultThemes = /** @type {import('daisyui').Theme[]} */ (Object.keys(them
  * @type {import('tailwindcss').Config}
  */
 const config = {
-  // ...uiConfig,
+  ...uiConfig,
   content: ['./src/**/*.{html,js,svelte,ts}', '../../packages/ui/src/**/*.{html,js,svelte,ts}'],
   plugins: [daisyui, typography],
-  // theme: {
-  //   extend: {
-  //     animation: uiConfig.theme?.extend?.animation,
-  //     keyframes: uiConfig.theme?.extend?.keyframes,
-  //   },
-  // },
+  theme: {
+    extend: {
+      animation: uiConfig.theme?.extend?.animation,
+      keyframes: uiConfig.theme?.extend?.keyframes,
+    },
+  },
 
   /**
    * @type {import('daisyui').Config}
