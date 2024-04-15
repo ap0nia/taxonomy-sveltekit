@@ -3,6 +3,7 @@
  */
 const config = {
   '*.?(c|m){js,ts}?(x)': ['eslint --quiet --fix', 'prettier --write'],
+  '*.svelte': ['eslint --quiet --fix', 'prettier --write'],
   '*.{css,json,yaml,yml}': ['prettier --write'],
 }
 
