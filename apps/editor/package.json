@@ -37,7 +37,8 @@
     "elysia": "^1.0.13",
     "mode-watcher": "^0.3.0",
     "nodemailer": "^6.9.13",
-    "tailwind-merge": "^2.2.2"
+    "tailwind-merge": "^2.2.2",
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.200",
