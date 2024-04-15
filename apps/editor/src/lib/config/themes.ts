@@ -55,6 +55,10 @@ export const LIGHT_THEME_KEY = 'light-theme'
  */
 export const DARK_THEME_KEY = 'dark-theme'
 
+export const DEFAULT_LIGHT_THEME = 'light'
+
+export const DEFAULT_DARK_THEME = 'dark'
+
 export const TOGGLE_ELEMENT_SELECTOR = '[data-toggle-theme]'
 
 export const TOGGLE_ELEMENT_DATA_KEY = 'data-key'
@@ -78,8 +82,13 @@ export const THEME_CONSTANTS = {
   MODE_WATCHER_KEY,
 }
 
-function createModeThemeStore() {
-  const store = writable({ light: '', dark: '' }, (_set, update) => {
+export const DEFAULT_THEME_MODES = {
+  light: DEFAULT_LIGHT_THEME,
+  dark: DEFAULT_DARK_THEME,
+}
+
+export function createModeThemeStore() {
+  const store = writable(DEFAULT_THEME_MODES, (_set, update) => {
     if (typeof document === 'undefined') return
 
     const lightTheme = localStorage.getItem(LIGHT_THEME_KEY)
@@ -147,9 +156,7 @@ export function setThemeFromMode(currentMode?: string) {
 
   const currentModeTheme = get(modeTheme)
 
-  const themeName = isLightModel
-    ? currentModeTheme.light || 'light'
-    : currentModeTheme.dark || 'dark'
+  const themeName = isLightModel ? currentModeTheme.light : currentModeTheme.dark
 
   document.documentElement.setAttribute(DATA_THEME_ATTRIBUTE, themeName)
 
