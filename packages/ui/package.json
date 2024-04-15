@@ -70,7 +70,9 @@
     "vite": "^5.2.8"
   },
   "dependencies": {
+    "bits-ui": "^0.21.3",
     "clsx": "^2.1.0",
+    "lucide-svelte": "^0.368.0",
     "tailwind-merge": "^2.2.2"
   }
 }
