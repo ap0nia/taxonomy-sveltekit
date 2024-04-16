@@ -13,7 +13,7 @@ const defaultThemes = /** @type {import('daisyui').Theme[]} */ (Object.keys(them
  */
 const config = {
   ...uiConfig,
-  content: ['./src/**/*.{html,js,svelte,ts}', '../../packages/ui/src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts,md}', '../../packages/ui/src/**/*.{html,js,svelte,ts}'],
   plugins: [daisyui, typography],
   theme: {
     extend: {
