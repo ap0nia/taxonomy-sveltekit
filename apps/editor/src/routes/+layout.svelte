@@ -1,9 +1,12 @@
 <script lang="ts">
   import '../app.css'
 
+  import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit'
+
   import ThemeWatcher from '$lib/components/theme/watcher.svelte'
   import { title } from '$lib/config/site'
   import { theme } from '$lib/config/themes'
+  import { i18n } from '$lib/i18n.js'
 
   import type { LayoutData } from './$types'
 
@@ -21,4 +24,6 @@
   <title>{title}</title>
 </svelte:head>
 
-<slot />
+<ParaglideJS {i18n}>
+  <slot />
+</ParaglideJS>

@@ -41,6 +41,7 @@ const config = {
     },
     alias: {
       $server: './src/server',
+      $paraglide: './src/paraglide',
       'contentlayer/generated': './.contentlayer/generated',
     },
   },

@@ -10,11 +10,11 @@
     "directory": "apps/editor"
   },
   "scripts": {
-    "postinstall": "svelte-kit sync",
+    "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && svelte-kit sync",
     "format": "prettier --write .",
     "lint": "eslint .",
     "dev": "vite",
-    "build": "vite build",
+    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "check": "svelte-check",
@@ -46,6 +46,8 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.200",
+    "@inlang/paraglide-js": "1.6.1",
+    "@inlang/paraglide-js-adapter-sveltekit": "^0.6.5",
     "@rollup/plugin-dynamic-import-vars": "^2.1.2",
     "@sentry/bundler-plugin-core": "^2.16.1",
     "@sentry/vite-plugin": "^2.16.1",
