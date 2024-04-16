@@ -26,7 +26,7 @@
             href={socials.github.url}
             target="_blank"
             rel="noreferrer"
-            class="btn btn-outline lg:btn-wide">GitHub</a
+            class="btn btn-outline lg:btn-wide">{$messages('view_code')}</a
           >
         </div>
       </div>
