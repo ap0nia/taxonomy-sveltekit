@@ -1,4 +1,5 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "Chào thế giới"
+  "hello": "Chào thế giới",
+  "description": "Một ứng dụng mẫu được xây dựng bằng 13 thành phần máy chủ Next.js."
 }

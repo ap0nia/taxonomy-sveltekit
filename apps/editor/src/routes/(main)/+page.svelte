@@ -9,11 +9,11 @@
     <div class="hero-content">
       <div class="max-w-5xl space-y-4 text-center">
         <a href={socials.twitter.url} target="_blank" class="badge badge-neutral badge-lg">
-          Follow along on Twitter {$messages.hello()}
+          Follow along on Twitter {$messages('hello', { name: 'World!' })}
         </a>
 
         <h1 class="font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-          An example app built using Next.js 13 server components.
+          {$messages('description')}
         </h1>
 
         <p class="max-w-3xl mx-auto opacity-70 sm:text-xl leading-normal sm:leading-8">

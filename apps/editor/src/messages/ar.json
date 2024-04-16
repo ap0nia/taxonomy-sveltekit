@@ -1,4 +1,5 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "مرحبا بالعالم"
+  "hello": "مرحبا بالعالم",
+  "description": "مثال لتطبيق تم إنشاؤه باستخدام مكونات خادم Next.js 13."
 }
