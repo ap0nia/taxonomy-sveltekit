@@ -8,6 +8,12 @@ function createThemeStore() {
 
     if (typeof document !== 'undefined') {
       document.documentElement.setAttribute(DATA_THEME_ATTRIBUTE, value.value)
+
+      const themeMode = themes[value.value as keyof typeof themes]
+
+      if (themeMode != null) {
+        localStorage.setItem(themeMode === 'light' ? LIGHT_THEME_KEY : DARK_THEME_KEY, value.value)
+      }
     }
   }
 
@@ -76,10 +82,6 @@ export const DEFAULT_LIGHT_THEME = 'light'
 
 export const DEFAULT_DARK_THEME = 'dark'
 
-export const TOGGLE_ELEMENT_SELECTOR = '[data-toggle-theme]'
-
-export const TOGGLE_ELEMENT_DATA_KEY = 'data-key'
-
 export const DATA_THEME_ATTRIBUTE = 'data-theme'
 
 export const MODE_WATCHER_KEY = 'mode-watcher-mode'
@@ -92,9 +94,8 @@ export const MODE_WATCHER_KEY = 'mode-watcher-mode'
  */
 export const THEME_CONSTANTS = {
   themes,
-  DEFAULT_THEME_KEY: THEME_KEY,
-  TOGGLE_ELEMENT_SELECTOR,
-  TOGGLE_ELEMENT_DATA_KEY,
+  LIGHT_THEME_KEY,
+  DARK_THEME_KEY,
   DATA_THEME_ATTRIBUTE,
   MODE_WATCHER_KEY,
 }
@@ -159,12 +160,6 @@ export const modeTheme = createModeThemeStore()
 export function setThemeFromMode(currentMode?: string) {
   if (typeof document === 'undefined') return
 
-  const toggleElement = document.querySelector(TOGGLE_ELEMENT_SELECTOR)
-
-  const customKey = toggleElement ? toggleElement.getAttribute(TOGGLE_ELEMENT_DATA_KEY) : null
-
-  const key = customKey ?? THEME_KEY
-
   const mode = currentMode ?? localStorage.getItem(MODE_WATCHER_KEY) ?? 'system'
 
   const isLightModel =
@@ -177,7 +172,7 @@ export function setThemeFromMode(currentMode?: string) {
 
   document.documentElement.setAttribute(DATA_THEME_ATTRIBUTE, themeName)
 
-  localStorage.setItem(key, themeName)
+  localStorage.setItem(isLightModel ? LIGHT_THEME_KEY : DARK_THEME_KEY, themeName)
 
   theme.set({ label: themeName, value: themeName })
 }
@@ -192,31 +187,19 @@ export function setThemeFromMode(currentMode?: string) {
 export function setModeFromTheme(constants: typeof THEME_CONSTANTS, currentMode?: string) {
   if (typeof document === 'undefined') return
 
-  var toggleElement = document.querySelector(constants.TOGGLE_ELEMENT_SELECTOR)
-
-  var customKey = toggleElement
-    ? toggleElement.getAttribute(constants.TOGGLE_ELEMENT_DATA_KEY)
-    : null
-
-  var key = customKey ?? constants.DEFAULT_THEME_KEY
-
-  var savedTheme = localStorage.getItem(key)
-
-  if (savedTheme != null) {
-    document.documentElement.setAttribute(constants.DATA_THEME_ATTRIBUTE, savedTheme)
-  }
-
-  var savedMode =
-    savedTheme != null ? constants.themes[savedTheme as keyof typeof constants.themes] : undefined
-
-  var mode =
-    savedMode != null
-      ? savedMode
-      : currentMode ?? localStorage.getItem(constants.MODE_WATCHER_KEY) ?? 'system'
+  var mode = currentMode ?? localStorage.getItem(constants.MODE_WATCHER_KEY) ?? 'system'
 
   var isLightModel =
     mode === 'light' ||
     (mode === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches)
+
+  var savedTheme = localStorage.getItem(
+    isLightModel ? constants.LIGHT_THEME_KEY : constants.DARK_THEME_KEY,
+  )
+
+  if (savedTheme != null) {
+    document.documentElement.setAttribute(constants.DATA_THEME_ATTRIBUTE, savedTheme)
+  }
 
   if (isLightModel) {
     document.documentElement.classList.remove('dark')
