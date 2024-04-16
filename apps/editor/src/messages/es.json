@@ -16,5 +16,15 @@
   "pricing": "Precios",
   "blog": "Blog",
   "documentation": "Documentación",
-  "about_this_project": "Este proyecto es un experimento para ver cómo funcionaría una aplicación moderna, con características como autenticación, suscripciones, rutas API y páginas estáticas en el directorio de aplicaciones Next.js 13."
+  "about_this_project": "Este proyecto es un experimento para ver cómo funcionaría una aplicación moderna, con características como autenticación, suscripciones, rutas API y páginas estáticas en el directorio de aplicaciones Next.js 13.",
+  "app_dir": "Directorio de aplicaciones, enrutamiento, diseños, carga de UI y rutas API.",
+  "server_client_components": "Componentes de servidor y cliente. Utilice gancho.",
+  "orm": "ORM usando Prisma e implementado en PlanetScale.",
+  "ui_components": "Componentes de interfaz de usuario creados con Radix UI y diseñados con Tailwind CSS.",
+  "authentication": "Autenticación mediante NextAuth.js y middlewares.",
+  "subscriptions": "Suscripciones gratuitas y de pago con Stripe.",
+  "also_features_blog": "Taxonomy también incluye un blog y un sitio de documentación con todas las funciones creado con Contentlayer y MDX.",
+  "is_open_source": "La taxonomía es de código abierto y está impulsada por software de código abierto.",
+  "code_is_available_on": "El código está disponible en",
+  "stars_on_github": "estrellas en GitHub"
 }
