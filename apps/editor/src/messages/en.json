@@ -31,5 +31,7 @@
   "authentication_label": "Authentication",
   "subscriptions_label": "Subscriptions",
   "database_label": "Database",
-  "proudly_open_source": "Proudly Open Source"
+  "proudly_open_source": "Proudly Open Source",
+  "login": "Login",
+  "sign_up": "Sign Up"
 }

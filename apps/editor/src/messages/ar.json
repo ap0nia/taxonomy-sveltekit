@@ -31,5 +31,7 @@
   "authentication_label": "المصادقة",
   "subscriptions_label": "الاشتراكات",
   "database_label": "قاعدة البيانات",
-  "proudly_open_source": "المصدر المفتوح بكل فخر"
+  "proudly_open_source": "المصدر المفتوح بكل فخر",
+  "login": "تسجيل الدخول",
+  "sign_up": "اشتراك"
 }

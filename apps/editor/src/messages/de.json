@@ -31,5 +31,7 @@
   "authentication_label": "Authentifizierung",
   "subscriptions_label": "Abonnements",
   "database_label": "Datenbank",
-  "proudly_open_source": "Stolz darauf, Open Source zu sein"
+  "proudly_open_source": "Stolz darauf, Open Source zu sein",
+  "login": "Anmeldung",
+  "sign_up": "Melden Sie sich an"
 }

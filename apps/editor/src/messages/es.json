@@ -31,5 +31,7 @@
   "authentication_label": "Autenticación",
   "subscriptions_label": "Suscripciones",
   "database_label": "Base de datos",
-  "proudly_open_source": "Orgullosamente de código abierto"
+  "proudly_open_source": "Orgullosamente de código abierto",
+  "login": "Acceso",
+  "sign_up": "Inscribirse"
 }
