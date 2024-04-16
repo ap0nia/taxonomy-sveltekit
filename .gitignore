@@ -41,6 +41,9 @@ Desktop.ini
 .env.*
 !.env.example
 
+## Google credentials for service account.
+credentials.json
+
 ## JetBrains IDE settings. https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 .idea/*.iml
 .idea/workspace.xml
