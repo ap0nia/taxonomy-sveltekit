@@ -37,6 +37,7 @@
     "drizzle-orm": "^0.30.8",
     "effect": "^2.4.18",
     "elysia": "^1.0.13",
+    "jiti": "^1.21.0",
     "js-cookie": "^3.0.5",
     "mode-watcher": "^0.3.0",
     "nodemailer": "^6.9.13",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.200",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.2",
     "@sentry/bundler-plugin-core": "^2.16.1",
     "@sentry/vite-plugin": "^2.16.1",
     "@svelte.kit/adapter-aws": "^0.4.3",

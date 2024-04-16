@@ -4,19 +4,29 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 export const Documentation = defineDocumentType(() => ({
   name: 'Documentation',
-  filePathPattern: `**/*.md`,
+  filePathPattern: `documentation/**/*.md`,
   fields: {
-    title: { type: 'string', required: true },
-    date: { type: 'date', required: true },
+    title: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+    },
+    published: {
+      type: 'boolean',
+      default: true,
+    },
   },
   computedFields: {
-    url: {
-      type: 'string',
-      resolve: (documentation) => `/documentation/${documentation._raw.flattenedPath}`,
-    },
     slug: {
       type: 'string',
-      resolve: (documentation) => documentation._raw.flattenedPath,
+      resolve: (documentation) =>
+        documentation._raw.sourceFilePath.slice('documentation/'.length).replace(/\.md$/, ''),
+    },
+    url: {
+      type: 'string',
+      resolve: (documentation) => `/${documentation._raw.sourceFilePath.replace(/\.md$/, '')}`,
     },
   },
 }))

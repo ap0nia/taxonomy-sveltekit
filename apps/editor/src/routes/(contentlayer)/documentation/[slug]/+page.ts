@@ -8,11 +8,19 @@ export const load: PageLoad = async (event) => {
 
   const documentation = allDocumentations.find((d) => d.slug === slug)
 
-  if (documentation == null) {
+  const documentationModule = await import(`../../../../content/documentation/${slug}.md`).catch(
+    (error) => {
+      console.error('Failed to load markdown module. ', error)
+    },
+  )
+
+  if (documentation == null || documentationModule == null) {
     return error(404)
   }
 
   return {
+    component: documentationModule.default,
+    metadata: documentationModule.metadata,
     documentation,
   }
 }

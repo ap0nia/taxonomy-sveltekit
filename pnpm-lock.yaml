@@ -112,6 +112,9 @@ importers:
       elysia:
         specifier: ^1.0.13
         version: 1.0.13(@sinclair/typebox@0.32.20)(typescript@5.1.6)
+      jiti:
+        specifier: ^1.21.0
+        version: 1.21.0
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.5
@@ -131,6 +134,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.200
         version: 2.2.200
+      '@rollup/plugin-dynamic-import-vars':
+        specifier: ^2.1.2
+        version: 2.1.2
       '@sentry/bundler-plugin-core':
         specifier: ^2.16.1
         version: 2.16.1
@@ -187,7 +193,7 @@ importers:
         version: 8.4.38
       postcss-load-config:
         specifier: ^5.0.3
-        version: 5.0.3(postcss@8.4.38)
+        version: 5.0.3(jiti@1.21.0)(postcss@8.4.38)
       svelte:
         specifier: ^4.2.13
         version: 4.2.13
@@ -323,7 +329,7 @@ importers:
         version: 8.4.38
       postcss-load-config:
         specifier: ^5.0.3
-        version: 5.0.3(postcss@8.4.38)
+        version: 5.0.3(jiti@1.21.0)(postcss@8.4.38)
       svelte:
         specifier: ^4.2.13
         version: 4.2.13
@@ -4029,6 +4035,42 @@ packages:
       {
         integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==,
       }
+
+  /@rollup/plugin-dynamic-import-vars@2.1.2:
+    resolution:
+      {
+        integrity: sha512-4lr2oXxs9hcxtGGaK8s0i9evfjzDrAs7ngw28TqruWKTEm0+U4Eljb+F6HXGYdFv8xRojQlrQwV7M/yxeh3yzQ==,
+      }
+    engines: { node: '>=14.0.0' }
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.1.0
+      astring: 1.8.6
+      estree-walker: 2.0.2
+      fast-glob: 3.3.1
+      magic-string: 0.30.9
+    dev: true
+
+  /@rollup/pluginutils@5.1.0:
+    resolution:
+      {
+        integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==,
+      }
+    engines: { node: '>=14.0.0' }
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.5
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
 
   /@rollup/rollup-android-arm-eabi@4.14.2:
     resolution:
@@ -8134,6 +8176,13 @@ packages:
       '@types/unist': 2.0.10
     dev: true
 
+  /estree-walker@2.0.2:
+    resolution:
+      {
+        integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==,
+      }
+    dev: true
+
   /estree-walker@3.0.3:
     resolution:
       {
@@ -12113,7 +12162,7 @@ packages:
       ts-node: 10.9.1(@types/node@20.4.5)(typescript@5.1.6)
       yaml: 2.4.1
 
-  /postcss-load-config@5.0.3(postcss@8.4.38):
+  /postcss-load-config@5.0.3(jiti@1.21.0)(postcss@8.4.38):
     resolution:
       {
         integrity: sha512-90pBBI5apUVruIEdCxZic93Wm+i9fTrp7TXbgdUCH+/L+2WnfpITSpq5dFU/IPvbv7aNiMlQISpUkAm3fEcvgQ==,
@@ -12128,6 +12177,7 @@ packages:
       postcss:
         optional: true
     dependencies:
+      jiti: 1.21.0
       lilconfig: 3.1.1
       postcss: 8.4.38
       yaml: 2.4.1
@@ -13675,7 +13725,7 @@ packages:
       detect-indent: 6.1.0
       magic-string: 0.30.9
       postcss: 8.4.38
-      postcss-load-config: 5.0.3(postcss@8.4.38)
+      postcss-load-config: 5.0.3(jiti@1.21.0)(postcss@8.4.38)
       sorcery: 0.11.0
       strip-indent: 3.0.0
       svelte: 4.2.13
