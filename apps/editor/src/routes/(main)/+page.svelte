@@ -5,7 +5,7 @@
 
 <div class="w-full my-8">
   <!-- Hero -->
-  <section class="hero py-32">
+  <section class="hero py-8 md:py-12 lg:py-32">
     <div class="hero-content">
       <div class="max-w-5xl space-y-4 text-center">
         <a href={socials.twitter.url} target="_blank" class="badge badge-neutral badge-lg">
@@ -30,6 +30,17 @@
           >
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-heading text-center text-3xl sm:text-3xl md:text-6xl">
+        {$messages('features')}
+      </h2>
+      <p class="text-lg text-center">
+        {$messages('about_this_project')}
+      </p>
     </div>
   </section>
 </div>
