@@ -33,5 +33,17 @@
   "database_label": "Database",
   "proudly_open_source": "Proudly Open Source",
   "login": "Login",
-  "sign_up": "Sign Up"
+  "sign_up": "Sign Up",
+  "simple_pricing": "Simple, transparent pricing",
+  "unlock_all_features": "Unlock all features including unlimited posts for your blog.",
+  "whats_included_pro": "What's included in the PRO plan",
+  "unlimited_posts": "",
+  "custom_domain": "",
+  "dashboard_analytics": "",
+  "access_discord": "Access to Discord",
+  "premium_support": "Premium Support",
+  "pro_price": "$19",
+  "billed_monthly": "Billed Monthly",
+  "is_demo_app": "Taxonomy is a demo app",
+  "you_can_test": "You can test the upgrade and won't be charged"
 }

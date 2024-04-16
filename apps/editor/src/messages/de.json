@@ -33,5 +33,17 @@
   "database_label": "Datenbank",
   "proudly_open_source": "Stolz darauf, Open Source zu sein",
   "login": "Anmeldung",
-  "sign_up": "Melden Sie sich an"
+  "sign_up": "Melden Sie sich an",
+  "simple_pricing": "Einfache, transparente Preisgestaltung",
+  "unlock_all_features": "Schalten Sie alle Funktionen frei, einschließlich unbegrenzter Beiträge für Ihr Blog.",
+  "whats_included_pro": "Was ist im PRO-Plan enthalten?",
+  "unlimited_posts": "",
+  "custom_domain": "",
+  "dashboard_analytics": "",
+  "access_discord": "Zugang zu Discord",
+  "premium_support": "Premium Kunden-Support",
+  "pro_price": "$19",
+  "billed_monthly": "Monatliche Abrechnung",
+  "is_demo_app": "Taxonomy ist eine Demo-App",
+  "you_can_test": "Sie können das Upgrade kostenlos testen"
 }

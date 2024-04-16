@@ -33,5 +33,17 @@
   "database_label": "データベース",
   "proudly_open_source": "誇り高きオープンソース",
   "login": "ログイン",
-  "sign_up": "サインアップ"
+  "sign_up": "サインアップ",
+  "simple_pricing": "シンプルで透明な価格設定",
+  "unlock_all_features": "ブログへの無制限の投稿を含むすべての機能のロックを解除します。",
+  "whats_included_pro": "PROプランに含まれるもの",
+  "unlimited_posts": "",
+  "custom_domain": "",
+  "dashboard_analytics": "",
+  "access_discord": "Discordへのアクセス",
+  "premium_support": "プレミアムサポート",
+  "pro_price": "19ドル",
+  "billed_monthly": "毎月請求",
+  "is_demo_app": "Taxonomyはデモアプリです",
+  "you_can_test": "アップグレードをテストできます。料金はかかりません"
 }
