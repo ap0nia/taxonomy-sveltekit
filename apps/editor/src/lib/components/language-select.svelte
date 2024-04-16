@@ -3,6 +3,7 @@
   import type { Selected } from 'bits-ui'
 
   import { goto } from '$app/navigation'
+  import { page } from '$app/stores'
   import { messages } from '$lib/config/language'
   import { i18n } from '$lib/i18n'
   import { type AvailableLanguageTag, availableLanguageTags, languageTag } from '$paraglide/runtime'
@@ -18,7 +19,8 @@
 
   async function handleSelectedChange(selected?: Selected<AvailableLanguageTag>) {
     if (selected?.value != null) {
-      await goto(i18n.resolveRoute('/', selected.value))
+      const untranslatedPathname = i18n.route($page.url.pathname)
+      await goto(i18n.resolveRoute(untranslatedPathname, selected.value))
     }
   }
 </script>
