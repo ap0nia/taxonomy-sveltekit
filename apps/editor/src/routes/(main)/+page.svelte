@@ -21,7 +21,7 @@
         </p>
 
         <div class="space-x-4">
-          <a href="/auth/login" class="btn btn-primary lg:btn-wide">Get Started</a>
+          <a href="/auth/login" class="btn btn-primary lg:btn-wide">{$messages('get_started')}</a>
           <a
             href={socials.github.url}
             target="_blank"
