@@ -1,5 +1,5 @@
 <script lang="ts">
-  // import Footer from '$lib/components/layout/footer.svelte'
+  import Footer from '$lib/components/layout/footer.svelte'
   import Header from '$lib/components/layout/header.svelte'
 </script>
 
@@ -10,7 +10,5 @@
     <slot />
   </div>
 
-  <!--
   <Footer />
-    -->
 </div>

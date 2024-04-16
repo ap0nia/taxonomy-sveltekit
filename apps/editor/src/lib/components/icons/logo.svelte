@@ -6,4 +6,4 @@
   type $$Props = SVGAttributes<SVGElement>
 </script>
 
-<CommandIcon class="w-16 h-16" {...$$props} />
+<CommandIcon {...$$props} />
