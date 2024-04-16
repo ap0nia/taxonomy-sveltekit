@@ -2,17 +2,17 @@
   import CheckIcon from '~icons/mdi/check'
 </script>
 
-<main class="container md:max-w-5xl md:py-12 lg:py-24 mx-auto space-y-4">
-  <div class="mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]">
+<main class="container md:max-w-5xl px-4 py-12 lg:py-24 mx-auto space-y-4">
+  <div class="space-y-2">
     <h2 class="font-heading text-3xl md:text-6xl">Simple, transparent pricing</h2>
     <p class="sm:text-lg">Unlock all features including unlimited posts for your blog.</p>
   </div>
 
-  <div class="grid w-full items-start gap-10 rounded-lg border p-10 md:grid-cols-[1fr_200px]">
+  <div class="w-full p-10 grid md:grid-cols-[1fr_200px] items-start gap-10 rounded-lg border">
     <div class="grid gap-6">
-      <h3 class="text-xl font-bold sm:text-2xl">What&apos;s included in the PRO plan</h3>
+      <h3 class="font-bold text-xl sm:text-2xl">What&apos;s included in the PRO plan</h3>
 
-      <ul class="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+      <ul class="grid gap-3 text-sm sm:grid-cols-2">
         <li class="flex items-center">
           <CheckIcon class="mr-2 h-4 w-4" />
           <span>Unlimited Posts</span>
