@@ -3,7 +3,7 @@
   import type { Selected } from 'bits-ui'
 
   import { goto } from '$app/navigation'
-  import { messages, translationFunction } from '$lib/config/language'
+  import { messages } from '$lib/config/language'
   import { i18n } from '$lib/i18n'
   import { type AvailableLanguageTag, availableLanguageTags, languageTag } from '$paraglide/runtime'
 
@@ -13,7 +13,7 @@
    */
   let selected = {
     value: languageTag(),
-    label: translationFunction('__name'),
+    label: $messages('__name'),
   }
 
   async function handleSelectedChange(selected?: Selected<AvailableLanguageTag>) {

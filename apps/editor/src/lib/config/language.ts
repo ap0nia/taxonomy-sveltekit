@@ -1,6 +1,7 @@
 import type { Selected } from 'bits-ui'
 import { writable } from 'svelte/store'
 
+import { t } from '$lib/i18n'
 import * as m from '$paraglide/messages'
 import {
   type AvailableLanguageTag,
@@ -9,6 +10,10 @@ import {
   setLanguageTag,
 } from '$paraglide/runtime'
 
+/**
+ * Don't use this store because {@link languageTag} only works fully correctly within components.
+ * This is a convenience observable that just provides updates.
+ */
 export function createLanguageStore() {
   const value = languageTag()
 
@@ -36,13 +41,6 @@ export function createLanguageStore() {
   }
 }
 
-export const translationFunction = <T extends keyof typeof m>(
-  message: T,
-  ...args: Parameters<(typeof m)[T]>
-): ReturnType<(typeof m)[T]> => {
-  return (m[message] as any)(...args)
-}
-
 /**
  * Reactive proxy to paraglide messages that updates whenever language changes.
  */
@@ -51,9 +49,9 @@ export function createMessagesStore() {
    * Using a derived store messes up the type of the translation function,
    * so use a writable store that subscribes/unsubscribes to the language store.
    */
-  const store = writable(translationFunction, (set) => {
+  const store = writable(t, (set) => {
     const unsubscribe = language.subscribe(() => {
-      set(translationFunction)
+      set(t)
     })
 
     return () => {

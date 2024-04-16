@@ -5,5 +5,9 @@
   "hello": "Hallo, {name}",
   "description": "Eine Beispiel-App, die mit Next.js 13-Serverkomponenten erstellt wurde.",
   "mission": "Ich erstelle eine Web-App mit Next.js 13 und mache alles Open Source. Bleiben Sie auf dem Laufenden, während wir dies gemeinsam herausfinden.",
-  "follow_on_twitter": "Folgen Sie uns auf Twitter"
+  "follow_on_twitter": "Folgen Sie uns auf Twitter",
+  "built_by": "Gebaut von",
+  "hosted_on": "Gehostet auf",
+  "illustrations_by": "Illustrationen von",
+  "source_code_available": "Der Quellcode ist verfügbar auf"
 }

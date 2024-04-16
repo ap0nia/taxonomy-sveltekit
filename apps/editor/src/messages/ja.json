@@ -5,5 +5,9 @@
   "hello": "こんにちは、 {name}",
   "description": "Next.js 13 サーバー コンポーネントを使用して構築されたサンプル アプリ。",
   "mission": "私は Next.js 13 を使用して Web アプリを構築しており、すべてをオープンソース化しています。一緒にこのことを理解しましょう。",
-  "follow_on_twitter": "Twitterでフォローしてください"
+  "follow_on_twitter": "Twitterでフォローしてください",
+  "built_by": "によって建設された",
+  "hosted_on": "ホスト",
+  "illustrations_by": "イラスト：",
+  "source_code_available": "ソースコードは以下から入手可能です。"
 }

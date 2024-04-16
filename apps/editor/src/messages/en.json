@@ -5,5 +5,9 @@
   "hello": "Hello, {name}",
   "description": "An example app built using Next.js 13 server components.",
   "mission": "I'm building a web app with Next.js 13 and open sourcing everything. Follow along as we figure this out together.",
-  "follow_on_twitter": "Follow along on Twitter"
+  "follow_on_twitter": "Follow along on Twitter",
+  "built_by": "Built by",
+  "hosted_on": "Hosted on",
+  "illustrations_by": "Illustrations by",
+  "source_code_available": "The source code is available on"
 }
