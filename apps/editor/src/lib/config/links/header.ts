@@ -13,6 +13,6 @@ export const headerLinks = [
   },
   {
     message: 'documentation',
-    href: '/documentation',
+    href: '/documentation/index',
   },
 ] as const
