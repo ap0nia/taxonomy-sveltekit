@@ -40,7 +40,7 @@
   </section>
 
   <!-- Features -->
-  <section class="max-w-4xl mx-auto py-12 space-y-8">
+  <section class="max-w-4xl mx-auto px-4 py-12 space-y-8">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-heading text-center text-3xl sm:text-3xl md:text-6xl">
         {$messages('features')}
@@ -97,7 +97,10 @@
   </section>
 
   <!-- Proudly open source -->
-  <section id="open-source" class="container mx-auto py-8 md:py-12 lg:py-24 text-center space-y-4">
+  <section
+    id="open-source"
+    class="container mx-auto px-4 py-8 md:py-12 lg:py-24 text-center space-y-4"
+  >
     <h2 class="font-heading text-3xl sm:text-3xl md:text-6xl">
       {$messages('proudly_open_source')}
     </h2>
