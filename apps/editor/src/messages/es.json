@@ -30,5 +30,6 @@
   "components_label": "Componentes",
   "authentication_label": "Autenticación",
   "subscriptions_label": "Suscripciones",
-  "database_label": "Base de datos"
+  "database_label": "Base de datos",
+  "proudly_open_source": "Orgullosamente de código abierto"
 }

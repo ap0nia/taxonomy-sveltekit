@@ -30,5 +30,6 @@
   "components_label": "コンポーネント",
   "authentication_label": "認証",
   "subscriptions_label": "サブスクリプション",
-  "database_label": "データベース"
+  "database_label": "データベース",
+  "proudly_open_source": "誇り高きオープンソース"
 }

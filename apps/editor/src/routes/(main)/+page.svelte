@@ -39,6 +39,7 @@
     </div>
   </section>
 
+  <!-- Features -->
   <section class="max-w-4xl mx-auto py-12 space-y-8">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-heading text-center text-3xl sm:text-3xl md:text-6xl">
@@ -93,5 +94,19 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Proudly open source -->
+  <section id="open-source" class="container mx-auto py-8 md:py-12 lg:py-24 text-center space-y-4">
+    <h2 class="font-heading text-3xl sm:text-3xl md:text-6xl">
+      {$messages('proudly_open_source')}
+    </h2>
+    <p class="sm:text-lg">
+      <span>{$messages('is_open_source')}</span>
+      <br />
+      <span>{$messages('code_is_available_on')} </span>
+      <a href={socials.github.url} target="_blank" rel="noreferrer" class="link"> GitHub </a>
+      <span>.</span>
+    </p>
   </section>
 </div>
