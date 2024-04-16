@@ -26,5 +26,9 @@
   "stars_on_github": "Sterne auf GitHub",
   "next_13": "App-Verzeichnis, Routing, Layouts, Laden von UI- und API-Routen.",
   "react_18": "Server- und Client-Komponenten. Hook verwenden.",
-  "database": "ORM verwendet Prisma und wird auf PlanetScale bereitgestellt."
+  "database": "ORM verwendet Prisma und wird auf PlanetScale bereitgestellt.",
+  "components_label": "Komponenten",
+  "authentication_label": "Authentifizierung",
+  "subscriptions_label": "Abonnements",
+  "database_label": "Datenbank"
 }

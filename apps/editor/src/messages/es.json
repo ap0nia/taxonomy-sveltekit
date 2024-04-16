@@ -26,5 +26,9 @@
   "stars_on_github": "estrellas en GitHub",
   "next_13": "Directorio de aplicaciones, enrutamiento, diseños, carga de UI y rutas API.",
   "react_18": "Componentes de servidor y cliente. Utilice gancho.",
-  "database": "ORM usando Prisma e implementado en PlanetScale."
+  "database": "ORM usando Prisma e implementado en PlanetScale.",
+  "components_label": "Componentes",
+  "authentication_label": "Autenticación",
+  "subscriptions_label": "Suscripciones",
+  "database_label": "Base de datos"
 }

@@ -67,28 +67,28 @@
       <div class="card border">
         <div class="card-body">
           <PlanetScaleIcon class="w-12 h-12 fill-current" />
-          <h2 class="font-bold">Database</h2>
+          <h2 class="font-bold">{$messages('database_label')}</h2>
           <p class="text-sm">{$messages('database')}</p>
         </div>
       </div>
       <div class="card border">
         <div class="card-body">
           <TailwindIcon class="w-12 h-12 fill-current" />
-          <h2 class="font-bold">Components</h2>
+          <h2 class="font-bold">{$messages('components_label')}</h2>
           <p class="text-sm">{$messages('ui_components')}</p>
         </div>
       </div>
       <div class="card border">
         <div class="card-body">
           <AuthIcon class="w-12 h-12 fill-current" />
-          <h2 class="font-bold">Authentication</h2>
+          <h2 class="font-bold">{$messages('authentication_label')}</h2>
           <p class="text-sm">{$messages('authentication')}</p>
         </div>
       </div>
       <div class="card border">
         <div class="card-body">
           <StripeIcon class="w-12 h-12 fill-current" />
-          <h2 class="font-bold">Subscriptions</h2>
+          <h2 class="font-bold">{$messages('subscriptions_label')}</h2>
           <p class="text-sm">{$messages('subscriptions')}</p>
         </div>
       </div>

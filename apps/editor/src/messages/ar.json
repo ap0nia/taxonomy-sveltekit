@@ -26,5 +26,9 @@
   "stars_on_github": "النجوم على جيثب",
   "next_13": "مدير التطبيق والتوجيه والتخطيطات وتحميل مسارات واجهة المستخدم وواجهة برمجة التطبيقات.",
   "react_18": "مكونات الخادم والعميل. استخدم الخطاف.",
-  "database": "ORM باستخدام Prisma ونشره على PlanetScale."
+  "database": "ORM باستخدام Prisma ونشره على PlanetScale.",
+  "components_label": "عناصر",
+  "authentication_label": "المصادقة",
+  "subscriptions_label": "الاشتراكات",
+  "database_label": "قاعدة البيانات"
 }

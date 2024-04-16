@@ -26,5 +26,9 @@
   "stars_on_github": "stars on GitHub",
   "next_13": "App dir, Routing, Layouts, Loading UI and API routes.",
   "react_18": "Server and Client Components. Use hook.",
-  "database": "ORM using Prisma and deployed on PlanetScale."
+  "database": "ORM using Prisma and deployed on PlanetScale.",
+  "components_label": "Components",
+  "authentication_label": "Authentication",
+  "subscriptions_label": "Subscriptions",
+  "database_label": "Database"
 }

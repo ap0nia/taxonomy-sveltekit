@@ -26,5 +26,9 @@
   "stars_on_github": "GitHub のスター",
   "next_13": "アプリ ディレクトリ、ルーティング、レイアウト、UI および API ルートの読み込み。",
   "react_18": "サーバーおよびクライアント コンポーネント。フックを使用します。",
-  "database": "Prisma を使用し、PlanetScale にデプロイされた ORM。"
+  "database": "Prisma を使用し、PlanetScale にデプロイされた ORM。",
+  "components_label": "コンポーネント",
+  "authentication_label": "認証",
+  "subscriptions_label": "サブスクリプション",
+  "database_label": "データベース"
 }
