@@ -58,6 +58,7 @@
     "autoprefixer": "^10.4.19",
     "aws-cdk": "^2.137.0",
     "aws-cdk-lib": "^2.137.0",
+    "contentlayer": "^0.3.4",
     "daisyui": "^4.10.1",
     "dotenv": "^16.4.5",
     "mdsvex": "^0.11.0",

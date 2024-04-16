@@ -12,6 +12,11 @@ const config = defineConfig({
       compiler: 'svelte',
     }),
   ],
+  server: {
+    fs: {
+      allow: ['.contentlayer'],
+    },
+  },
 })
 
 export default config

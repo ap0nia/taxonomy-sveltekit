@@ -41,6 +41,7 @@ const config = {
     },
     alias: {
       $server: './src/server',
+      'contentlayer/generated': './.contentlayer/generated',
     },
   },
   extensions: ['.svelte', '.md'],
