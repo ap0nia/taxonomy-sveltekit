@@ -11,7 +11,7 @@
 
 <div class="w-full my-8">
   <!-- Hero -->
-  <section class="hero py-8 md:py-12 lg:py-32">
+  <section id="hero" class="hero py-8 md:py-12 lg:py-32">
     <div class="hero-content">
       <div class="max-w-5xl space-y-4 text-center">
         <a href={socials.twitter.url} target="_blank" class="badge badge-neutral badge-lg">
@@ -40,7 +40,7 @@
   </section>
 
   <!-- Features -->
-  <section class="max-w-4xl mx-auto px-4 py-12 space-y-8">
+  <section id="features" class="max-w-4xl mx-auto px-4 py-12 space-y-8">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-heading text-center text-3xl sm:text-3xl md:text-6xl">
         {$messages('features')}

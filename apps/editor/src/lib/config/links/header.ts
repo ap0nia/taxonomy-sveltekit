@@ -1,7 +1,7 @@
 export const headerLinks = [
   {
     message: 'features',
-    href: '/features',
+    href: '/#features',
   },
   {
     message: 'pricing',
