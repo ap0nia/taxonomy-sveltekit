@@ -5,17 +5,24 @@ description: Welcome to the Taxonomy documentation.
 
 <script>
   import Card from '$lib/components/mdx/card.svelte'
+  import Callout from '$lib/components/mdx/callout.svelte'
 </script>
 
 This is the documentation for the Taxonomy site.
 
 This is an example of a doc site built using [ContentLayer](/docs/documentation/contentlayer) and MDX.
 
+<Callout>
+
+This site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter [@shadcn](https://twitter.com/shadcn).
+
+</Callout>
+
 ## Features
 
 Select a feature below to learn more about it.
 
-<div class="grid sm:grid-cols-2 gap-4 mt-6 border-red-400">
+<div class="grid sm:grid-cols-2 gap-4 mt-6">
 
 <Card href="/docs/documentation">
 
