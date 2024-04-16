@@ -24,7 +24,7 @@ Select a feature below to learn more about it.
 
 <div class="grid sm:grid-cols-2 gap-4 mt-6">
 
-<Card href="/docs/documentation">
+<Card href="/documentation/index">
 
 ### Documentation
 
@@ -32,7 +32,7 @@ This documentation site built using Contentlayer.
 
 </Card>
 
-<Card href="/docs/marketing" disabled>
+<Card href="/marketing/index" disabled>
 
 ### Marketing
 
@@ -40,7 +40,7 @@ The marketing site with landing pages.
 
 </Card>
 
-<Card href="/docs/app" disabled>
+<Card href="/app/index" disabled>
 
 ### App
 
@@ -48,7 +48,7 @@ The dashboard with auth and subscriptions.
 
 </Card>
 
-<Card href="/docs/blog" disabled>
+<Card href="/blog/index" disabled>
 
 ### Blog
 
