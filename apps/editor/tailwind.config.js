@@ -5,6 +5,7 @@ import uiConfig from '@taxonomy/ui/tailwind.config'
 
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 const defaultThemes = /** @type {import('daisyui').Theme[]} */ (Object.keys(themes))
 
@@ -19,6 +20,10 @@ const config = {
     extend: {
       animation: uiConfig.theme?.extend?.animation,
       keyframes: uiConfig.theme?.extend?.keyframes,
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+      },
     },
   },
 
