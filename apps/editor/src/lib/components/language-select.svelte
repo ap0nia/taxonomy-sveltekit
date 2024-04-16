@@ -1,27 +1,45 @@
 <script lang="ts">
   import * as Select from '@taxonomy/ui/select/index.js'
+  import type { Selected } from 'bits-ui'
 
-  import { language, messages } from '$lib/config/language'
-  import { availableLanguageTags } from '$paraglide/runtime'
+  import { goto } from '$app/navigation'
+  import { messages, translationFunction } from '$lib/config/language'
+  import { i18n } from '$lib/i18n'
+  import { type AvailableLanguageTag, availableLanguageTags, languageTag } from '$paraglide/runtime'
+
+  /**
+   * After navigation, {@link languageTag} updates and this component re-renders with
+   * with the latest, correct value.
+   */
+  let selected = {
+    value: languageTag(),
+    label: translationFunction('__name'),
+  }
+
+  async function handleSelectedChange(selected?: Selected<AvailableLanguageTag>) {
+    if (selected?.value != null) {
+      await goto(i18n.resolveRoute('/', selected.value))
+    }
+  }
 </script>
 
 <!--
 @component
 
-A select menu that can dynamically change the website's theme.
+A select menu that navigates to different language settings.
 -->
 
-<Select.Root bind:selected={$language}>
+<Select.Root {selected} onSelectedChange={handleSelectedChange}>
   <Select.Trigger class="w-36">
     <Select.Value placeholder="Select a language" />
   </Select.Trigger>
 
   <Select.Content>
     <Select.Group>
-      {#each availableLanguageTags as languageTag}
-        <Select.Item value={languageTag}>
-          <span>{$messages('__code', {}, { languageTag })} </span>
-          <span>{$messages('__name', {}, { languageTag })} </span>
+      {#each availableLanguageTags as tag}
+        <Select.Item value={tag}>
+          {$messages('__code', {}, { languageTag: tag })}
+          {$messages('__name', {}, { languageTag: tag })}
         </Select.Item>
       {/each}
     </Select.Group>

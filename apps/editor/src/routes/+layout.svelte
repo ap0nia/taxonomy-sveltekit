@@ -2,11 +2,13 @@
   import '../app.css'
 
   import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit'
+  import { onMount } from 'svelte'
 
   import ThemeWatcher from '$lib/components/theme/watcher.svelte'
   import { title } from '$lib/config/site'
   import { theme } from '$lib/config/themes'
   import { i18n } from '$lib/i18n.js'
+  import { languageTag, setLanguageTag } from '$paraglide/runtime'
 
   import type { LayoutData } from './$types'
 
@@ -16,6 +18,10 @@
    * Set the global theme based on the saved cookie value when the page is rendered for the first time.
    */
   theme.set({ value: data.theme ?? '', label: data.theme ?? '' })
+
+  onMount(() => {
+    setLanguageTag(languageTag())
+  })
 </script>
 
 <ThemeWatcher />

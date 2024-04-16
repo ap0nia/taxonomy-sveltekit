@@ -11,6 +11,7 @@ import {
 
 export function createLanguageStore() {
   const value = languageTag()
+
   const label = m.__name({}, { languageTag: value })
 
   const store = writable({ label, value }, (set) => {
@@ -35,17 +36,17 @@ export function createLanguageStore() {
   }
 }
 
+export const translationFunction = <T extends keyof typeof m>(
+  message: T,
+  ...args: Parameters<(typeof m)[T]>
+): ReturnType<(typeof m)[T]> => {
+  return (m[message] as any)(...args)
+}
+
 /**
  * Reactive proxy to paraglide messages that updates whenever language changes.
  */
 export function createMessagesStore() {
-  const translationFunction = <T extends keyof typeof m>(
-    message: T,
-    ...args: Parameters<(typeof m)[T]>
-  ): ReturnType<(typeof m)[T]> => {
-    return (m[message] as any)(...args)
-  }
-
   /**
    * Using a derived store messes up the type of the translation function,
    * so use a writable store that subscribes/unsubscribes to the language store.

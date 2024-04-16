@@ -6,6 +6,7 @@ export const load: LayoutServerLoad = async (event) => {
   const theme = event.cookies.get(THEME_KEY)
 
   return {
+    paraglide: event.locals.paraglide,
     theme,
   }
 }
