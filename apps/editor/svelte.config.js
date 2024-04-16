@@ -49,6 +49,9 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extensions: ['.md'],
+      layout: {
+        _: './src/content/layout.svelte',
+      },
     }),
   ],
 }
