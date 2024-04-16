@@ -17,14 +17,14 @@
   "blog": "ブログ",
   "documentation": "ドキュメンテーション",
   "about_this_project": "このプロジェクトは、認証、サブスクリプション、API ルート、静的ページなどの機能を備えた最新のアプリが Next.js 13 アプリ ディレクトリでどのように動作するかを確認するための実験です。",
-  "app_dir": "アプリ ディレクトリ、ルーティング、レイアウト、UI および API ルートの読み込み。",
-  "server_client_components": "サーバーおよびクライアント コンポーネント。フックを使用します。",
-  "orm": "Prisma を使用し、PlanetScale にデプロイされた ORM。",
   "ui_components": "Radix UI を使用して構築され、Tailwind CSS でスタイル設定された UI コンポーネント。",
   "authentication": "NextAuth.js とミドルウェアを使用した認証。",
   "subscriptions": "Stripe を使用した無料および有料のサブスクリプション。",
   "also_features_blog": "Taxonomy には、Contentlayer と MDX を使用して構築されたブログとフル機能のドキュメント サイトも含まれています。",
   "is_open_source": "Taxonomy はオープンソースであり、オープンソース ソフトウェアによって実行されます。",
   "code_is_available_on": "コードは以下から入手可能です",
-  "stars_on_github": "GitHub のスター"
+  "stars_on_github": "GitHub のスター",
+  "next_13": "アプリ ディレクトリ、ルーティング、レイアウト、UI および API ルートの読み込み。",
+  "react_18": "サーバーおよびクライアント コンポーネント。フックを使用します。",
+  "database": "Prisma を使用し、PlanetScale にデプロイされた ORM。"
 }

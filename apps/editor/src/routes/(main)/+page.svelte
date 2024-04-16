@@ -1,4 +1,10 @@
 <script lang="ts">
+  import AuthIcon from '~icons/simple-icons/auth0'
+  import NextjsIcon from '~icons/simple-icons/nextdotjs'
+  import PlanetScaleIcon from '~icons/simple-icons/planetscale'
+  import ReactIcon from '~icons/simple-icons/react'
+  import StripeIcon from '~icons/simple-icons/stripe'
+  import TailwindIcon from '~icons/simple-icons/tailwindcss'
   import { messages } from '$lib/config/language'
   import { socials } from '$lib/config/site'
 </script>
@@ -33,7 +39,7 @@
     </div>
   </section>
 
-  <section class="py-12">
+  <section class="max-w-4xl mx-auto py-12 space-y-8">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-heading text-center text-3xl sm:text-3xl md:text-6xl">
         {$messages('features')}
@@ -41,6 +47,51 @@
       <p class="text-lg text-center">
         {$messages('about_this_project')}
       </p>
+    </div>
+
+    <div class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div class="card border">
+        <div class="card-body">
+          <NextjsIcon class="w-12 h-12 fill-current" />
+          <h2 class="font-bold">Next.js 13</h2>
+          <p class="text-sm">{$messages('next_13')}</p>
+        </div>
+      </div>
+      <div class="card border">
+        <div class="card-body">
+          <ReactIcon class="w-12 h-12 fill-red-400" />
+          <h2 class="font-bold">React 18</h2>
+          <p class="text-sm">{$messages('react_18')}</p>
+        </div>
+      </div>
+      <div class="card border">
+        <div class="card-body">
+          <PlanetScaleIcon class="w-12 h-12 fill-current" />
+          <h2 class="font-bold">Database</h2>
+          <p class="text-sm">{$messages('database')}</p>
+        </div>
+      </div>
+      <div class="card border">
+        <div class="card-body">
+          <TailwindIcon class="w-12 h-12 fill-current" />
+          <h2 class="font-bold">Components</h2>
+          <p class="text-sm">{$messages('ui_components')}</p>
+        </div>
+      </div>
+      <div class="card border">
+        <div class="card-body">
+          <AuthIcon class="w-12 h-12 fill-current" />
+          <h2 class="font-bold">Authentication</h2>
+          <p class="text-sm">{$messages('authentication')}</p>
+        </div>
+      </div>
+      <div class="card border">
+        <div class="card-body">
+          <StripeIcon class="w-12 h-12 fill-current" />
+          <h2 class="font-bold">Subscriptions</h2>
+          <p class="text-sm">{$messages('subscriptions')}</p>
+        </div>
+      </div>
     </div>
   </section>
 </div>

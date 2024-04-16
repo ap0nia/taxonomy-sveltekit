@@ -17,14 +17,14 @@
   "blog": "Blog",
   "documentation": "Documentation",
   "about_this_project": "This project is an experiment to see how a modern app, with features like auth, subscriptions, API routes, and static pages would work in Next.js 13 app dir.",
-  "app_dir": "App dir, Routing, Layouts, Loading UI and API routes.",
-  "server_client_components": "Server and Client Components. Use hook.",
-  "orm": "ORM using Prisma and deployed on PlanetScale.",
   "ui_components": "UI components built using Radix UI and styled with Tailwind CSS.",
   "authentication": "Authentication using NextAuth.js and middlewares.",
   "subscriptions": "Free and paid subscriptions using Stripe.",
   "also_features_blog": "Taxonomy also includes a blog and a full-featured documentation site built using Contentlayer and MDX.",
   "is_open_source": "Taxonomy is open source and powered by open source software.",
   "code_is_available_on": "The code is available on",
-  "stars_on_github": "stars on GitHub"
+  "stars_on_github": "stars on GitHub",
+  "next_13": "App dir, Routing, Layouts, Loading UI and API routes.",
+  "react_18": "Server and Client Components. Use hook.",
+  "database": "ORM using Prisma and deployed on PlanetScale."
 }
