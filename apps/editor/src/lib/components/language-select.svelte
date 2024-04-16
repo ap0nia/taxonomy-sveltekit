@@ -30,11 +30,11 @@ A select menu that navigates to different language settings.
 -->
 
 <Select.Root {selected} onSelectedChange={handleSelectedChange}>
-  <Select.Trigger class="w-36">
+  <Select.Trigger>
     <Select.Value placeholder="Select a language" />
   </Select.Trigger>
 
-  <Select.Content>
+  <Select.Content class="!w-auto">
     <Select.Group>
       {#each availableLanguageTags as tag}
         <Select.Item value={tag}>

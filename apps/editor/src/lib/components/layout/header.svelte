@@ -39,7 +39,7 @@
   <header class="flex justify-center border-b">
     <div class="navbar max-w-7xl justify-between gap-4">
       <div class="navbar-start gap-2 w-auto">
-        <Sheet.Trigger class="block sm:hidden btn btn-sm btn-ghost">
+        <Sheet.Trigger class="block lg:hidden btn btn-sm btn-ghost">
           <MenuRoundedIcon class="h-6 w-6 text-primary" />
         </Sheet.Trigger>
 
@@ -50,7 +50,7 @@
       </div>
 
       <div class="navbar-center">
-        <ul class="menu menu-horizontal hidden px-1 md:flex">
+        <ul class="menu menu-horizontal hidden px-1 lg:flex">
           {#each headerLinks as { href, message } (href)}
             <li>
               <a {href}>{$messages(message)}</a>
@@ -60,21 +60,21 @@
       </div>
 
       <div class="navbar-end flex items-center gap-2">
-        <div class="p-2">
+        <div class="p-2 hidden sm:flex items-center gap-2 shrink-0">
           <div class="join ring-1 ring-base-content">
             <div class="join-item lg:rounded-r-0">
               <ThemeToggle class="lg:rounded-r-none" />
             </div>
 
-            <div class="divider divider-horizontal join-item m-0 w-0 hidden lg:flex" />
+            <div class="divider divider-horizontal join-item m-0 w-0 hidden xl:flex" />
 
-            <div class="join-item hidden lg:block">
+            <div class="join-item hidden xl:block">
               <ThemeSelect triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
             </div>
           </div>
-        </div>
 
-        <LanguageSelect />
+          <LanguageSelect />
+        </div>
 
         {#if user}
           <DropdownMenu.Root>
@@ -116,8 +116,10 @@
             </DropdownMenu.Content>
           </DropdownMenu.Root>
         {:else}
-          <a href="/auth/login" class="btn btn-primary btn-sm">{$messages('login')}</a>
-          <a href="/auth/sign-up" class="btn btn-secondary btn-sm">{$messages('sign_up')}</a>
+          <div class="flex items-center shrink-0 gap-2">
+            <a href="/auth/login" class="btn btn-primary btn-sm">{$messages('login')}</a>
+            <a href="/auth/sign-up" class="btn btn-secondary btn-sm">{$messages('sign_up')}</a>
+          </div>
         {/if}
       </div>
     </div>
@@ -137,12 +139,19 @@
     <div class="divider" />
 
     <ul class="menu">
-      {#each headerLinks as { href, label } (href)}
+      {#each headerLinks as { href, message } (href)}
         <li>
-          <a {href}>{label}</a>
+          <a {href}>{$messages(message)}</a>
         </li>
       {/each}
     </ul>
+
+    <div class="divider" />
+
+    <div class="">
+      <a href="/auth/login" class="btn btn-primary btn-sm">{$messages('login')}</a>
+      <a href="/auth/sign-up" class="btn btn-secondary btn-sm">{$messages('sign_up')}</a>
+    </div>
 
     <div class="divider" />
 
