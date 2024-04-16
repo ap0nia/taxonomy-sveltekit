@@ -13,6 +13,7 @@
   import LanguageSelect from '$lib/components/language-select.svelte'
   import ThemeSelect from '$lib/components/theme/select.svelte'
   import ThemeToggle from '$lib/components/theme/toggle.svelte'
+  import { messages } from '$lib/config/language'
   import { headerLinks } from '$lib/config/links/header'
 
   let open = false
@@ -50,9 +51,9 @@
 
       <div class="navbar-center">
         <ul class="menu menu-horizontal hidden px-1 md:flex">
-          {#each headerLinks as { href, label } (href)}
+          {#each headerLinks as { href, message } (href)}
             <li>
-              <a {href}>{label}</a>
+              <a {href}>{$messages(message)}</a>
             </li>
           {/each}
         </ul>

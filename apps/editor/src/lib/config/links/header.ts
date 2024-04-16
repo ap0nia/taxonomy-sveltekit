@@ -1,23 +1,18 @@
-export interface HeaderLink {
-  label: string
-  href: string
-}
-
-export const headerLinks: HeaderLink[] = [
+export const headerLinks = [
   {
-    label: 'Features',
+    message: 'features',
     href: '/features',
   },
   {
-    label: 'Pricing',
+    message: 'pricing',
     href: '/pricing',
   },
   {
-    label: 'Blog',
+    message: 'blog',
     href: '/blog',
   },
   {
-    label: 'Documentation',
+    message: 'documentation',
     href: '/documentation',
   },
-]
+] as const
