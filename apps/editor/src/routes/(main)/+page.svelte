@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { messages } from '$lib/config/language'
   import { socials } from '$lib/config/site'
-  import * as m from '$paraglide/messages'
 </script>
 
 <div class="w-full my-8">
@@ -9,7 +9,7 @@
     <div class="hero-content">
       <div class="max-w-5xl space-y-4 text-center">
         <a href={socials.twitter.url} target="_blank" class="badge badge-neutral badge-lg">
-          Follow along on Twitter {m.hello()}
+          Follow along on Twitter {$messages.hello()}
         </a>
 
         <h1 class="font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
