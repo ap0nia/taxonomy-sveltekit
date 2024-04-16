@@ -9,7 +9,7 @@
     <div class="hero-content">
       <div class="max-w-5xl space-y-4 text-center">
         <a href={socials.twitter.url} target="_blank" class="badge badge-neutral badge-lg">
-          Follow along on Twitter {$messages('hello', { name: 'World!' })}
+          {$messages('follow_on_twitter')}
         </a>
 
         <h1 class="font-heading font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
@@ -17,8 +17,7 @@
         </h1>
 
         <p class="max-w-3xl mx-auto opacity-70 sm:text-xl leading-normal sm:leading-8">
-          I&apos;m building a web app with Next.js 13 and open sourcing everything. Follow along as
-          we figure this out together.
+          {$messages('mission')}
         </p>
 
         <div class="space-x-4">

@@ -10,10 +10,10 @@
   import { afterNavigate } from '$app/navigation'
   import { page } from '$app/stores'
   import Logo from '$lib/components/icons/logo.svelte'
+  import LanguageSelect from '$lib/components/language-select.svelte'
   import ThemeSelect from '$lib/components/theme/select.svelte'
   import ThemeToggle from '$lib/components/theme/toggle.svelte'
   import { headerLinks } from '$lib/config/links/header'
-  import { setLanguageTag } from '$paraglide/runtime'
 
   let open = false
 
@@ -73,6 +73,8 @@
           </div>
         </div>
 
+        <LanguageSelect />
+
         {#if user}
           <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild let:builder>
@@ -117,8 +119,6 @@
           <a href="/auth/sign-up" class="btn btn-secondary btn-sm">Sign Up</a>
         {/if}
       </div>
-      <button on:click={() => setLanguageTag('de')} class="btn">DE</button>
-      <button on:click={() => setLanguageTag('en')} class="btn">EN</button>
     </div>
   </header>
 

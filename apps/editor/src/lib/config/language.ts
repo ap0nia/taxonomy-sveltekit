@@ -1,15 +1,39 @@
+import type { Selected } from 'bits-ui'
 import { writable } from 'svelte/store'
 
 import * as m from '$paraglide/messages'
-import { languageTag, onSetLanguageTag } from '$paraglide/runtime'
+import {
+  type AvailableLanguageTag,
+  languageTag,
+  onSetLanguageTag,
+  setLanguageTag,
+} from '$paraglide/runtime'
 
-export const language = writable(languageTag(), (set) => {
-  if (typeof document === 'undefined') return
+export function createLanguageStore() {
+  const value = languageTag()
+  const label = m.__name({}, { languageTag: value })
 
-  onSetLanguageTag((newLanguageTag) => {
-    set(newLanguageTag)
+  const store = writable({ label, value }, (set) => {
+    if (typeof document === 'undefined') return
+
+    onSetLanguageTag((newLanguageTag) => {
+      const label = m.__name({ language: newLanguageTag })
+      set({ label, value: newLanguageTag })
+    })
   })
-})
+
+  /**
+   * Don't directly set the store, the store will listen to changes to the paraglide store.
+   */
+  const set = (selected: Selected<AvailableLanguageTag>) => {
+    setLanguageTag(selected.value)
+  }
+
+  return {
+    ...store,
+    set,
+  }
+}
 
 /**
  * Reactive proxy to paraglide messages that updates whenever language changes.
@@ -40,5 +64,7 @@ export function createMessagesStore() {
     ...store,
   }
 }
+
+export const language = createLanguageStore()
 
 export const messages = createMessagesStore()

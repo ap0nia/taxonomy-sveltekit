@@ -1,5 +1,9 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "こんにちは世界",
-  "description": "Next.js 13 サーバー コンポーネントを使用して構築されたサンプル アプリ。"
+  "__name": "日本語",
+  "__code": "JA",
+  "hello": "こんにちは、 {name}",
+  "description": "Next.js 13 サーバー コンポーネントを使用して構築されたサンプル アプリ。",
+  "mission": "私は Next.js 13 を使用して Web アプリを構築しており、すべてをオープンソース化しています。一緒にこのことを理解しましょう。",
+  "follow_on_twitter": "Twitterでフォローしてください"
 }

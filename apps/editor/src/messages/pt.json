@@ -1,5 +1,0 @@
-{
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "Olá Mundo",
-  "description": "Um aplicativo de exemplo criado usando componentes de servidor Next.js 13."
-}

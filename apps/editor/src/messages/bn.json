@@ -1,5 +1,0 @@
-{
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "ওহে বিশ্ব",
-  "description": "Next.js 13 সার্ভার উপাদান ব্যবহার করে নির্মিত একটি উদাহরণ অ্যাপ।"
-}

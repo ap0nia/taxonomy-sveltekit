@@ -1,5 +1,0 @@
-{
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello": "Hai dunia",
-  "description": "Contoh apl yang dibina menggunakan komponen pelayan Next.js 13."
-}
