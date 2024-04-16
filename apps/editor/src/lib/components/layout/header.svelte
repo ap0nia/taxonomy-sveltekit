@@ -116,8 +116,8 @@
             </DropdownMenu.Content>
           </DropdownMenu.Root>
         {:else}
-          <a href="/auth/login" class="btn btn-primary btn-sm">Login</a>
-          <a href="/auth/sign-up" class="btn btn-secondary btn-sm">Sign Up</a>
+          <a href="/auth/login" class="btn btn-primary btn-sm">{$messages('login')}</a>
+          <a href="/auth/sign-up" class="btn btn-secondary btn-sm">{$messages('sign_up')}</a>
         {/if}
       </div>
     </div>
