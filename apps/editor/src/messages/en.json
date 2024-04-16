@@ -15,5 +15,6 @@
   "features": "Features",
   "pricing": "Pricing",
   "blog": "Blog",
-  "documentation": "Documentation"
+  "documentation": "Documentation",
+  "about_this_project": "This project is an experiment to see how a modern app, with features like auth, subscriptions, API routes, and static pages would work in Next.js 13 app dir."
 }

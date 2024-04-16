@@ -15,5 +15,6 @@
   "features": "Características",
   "pricing": "Precios",
   "blog": "Blog",
-  "documentation": "Documentación"
+  "documentation": "Documentación",
+  "about_this_project": "Este proyecto es un experimento para ver cómo funcionaría una aplicación moderna, con características como autenticación, suscripciones, rutas API y páginas estáticas en el directorio de aplicaciones Next.js 13."
 }

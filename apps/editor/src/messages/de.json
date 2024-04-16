@@ -15,5 +15,6 @@
   "features": "Merkmale",
   "pricing": "Preisgestaltung",
   "blog": "Der Blog",
-  "documentation": "Dokumentation"
+  "documentation": "Dokumentation",
+  "about_this_project": "Dieses Projekt ist ein Experiment, um zu sehen, wie eine moderne App mit Funktionen wie Authentifizierung, Abonnements, API-Routen und statischen Seiten im App-Verzeichnis von Next.js 13 funktionieren würde."
 }
