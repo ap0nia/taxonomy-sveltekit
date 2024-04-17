@@ -97,6 +97,9 @@ importers:
       '@taxonomy/ui':
         specifier: workspace:^
         version: link:../../packages/ui
+      '@taxonomy/vercel-og':
+        specifier: workspace:^
+        version: link:../../packages/vercel-og
       '@vercel/og':
         specifier: ^0.6.2
         version: 0.6.2
@@ -133,9 +136,6 @@ importers:
       remark:
         specifier: ^15.0.1
         version: 15.0.1
-      satori-html:
-        specifier: ^0.3.2
-        version: 0.3.2
       tailwind-merge:
         specifier: ^2.2.2
         version: 2.2.2
@@ -171,11 +171,11 @@ importers:
         specifier: ^2.16.1
         version: 2.16.1
       '@svelte.kit/adapter-aws':
-        specifier: ^0.4.3
-        version: 0.4.3(svelte@4.2.13)(vite@5.2.8)
+        specifier: ^0.5.0
+        version: 0.5.0(svelte@4.2.13)(vite@5.2.8)
       '@svelte.kit/cdk':
-        specifier: ^0.4.3
-        version: 0.4.3(svelte@4.2.13)(vite@5.2.8)
+        specifier: ^0.5.0
+        version: 0.5.0(svelte@4.2.13)(vite@5.2.8)
       '@sveltejs/kit':
         specifier: ^2.5.6
         version: 2.5.6(@sveltejs/vite-plugin-svelte@3.1.0)(svelte@4.2.13)(vite@5.2.8)
@@ -385,6 +385,31 @@ importers:
         specifier: ^5.2.8
         version: 5.2.8(@types/node@20.4.5)
 
+  packages/vercel-og:
+    dependencies:
+      '@resvg/resvg-js':
+        specifier: ^2.6.2
+        version: 2.6.2
+      satori:
+        specifier: ^0.10.13
+        version: 0.10.13
+      satori-html:
+        specifier: ^0.3.2
+        version: 0.3.2
+      svelte:
+        specifier: ^4.2.13
+        version: 4.2.13
+      svelte2tsx:
+        specifier: ^0.7.6
+        version: 0.7.6(svelte@4.2.13)(typescript@5.1.6)
+    devDependencies:
+      '@taxonomy/tsconfig':
+        specifier: workspace:^
+        version: link:../tsconfig
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+
 packages:
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution:
@@ -408,8 +433,8 @@ packages:
       }
     engines: { node: '>=6.0.0' }
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.19
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
 
   /@antfu/install-pkg@0.1.1:
     resolution:
@@ -3600,17 +3625,6 @@ packages:
       '@sinclair/typebox': 0.27.8
     dev: true
 
-  /@jridgewell/gen-mapping@0.3.3:
-    resolution:
-      {
-        integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==,
-      }
-    engines: { node: '>=6.0.0' }
-    dependencies:
-      '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.19
-
   /@jridgewell/gen-mapping@0.3.5:
     resolution:
       {
@@ -3629,13 +3643,6 @@ packages:
       }
     engines: { node: '>=6.0.0' }
     requiresBuild: true
-
-  /@jridgewell/set-array@1.1.2:
-    resolution:
-      {
-        integrity: sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==,
-      }
-    engines: { node: '>=6.0.0' }
 
   /@jridgewell/set-array@1.2.1:
     resolution:
@@ -3658,6 +3665,7 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /@jridgewell/trace-mapping@0.3.25:
     resolution:
@@ -4674,6 +4682,171 @@ packages:
       {
         integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==,
       }
+
+  /@resvg/resvg-js-android-arm-eabi@2.6.2:
+    resolution:
+      {
+        integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-android-arm64@2.6.2:
+    resolution:
+      {
+        integrity: sha512-VcOKezEhm2VqzXpcIJoITuvUS/fcjIw5NA/w3tjzWyzmvoCdd+QXIqy3FBGulWdClvp4g+IfUemigrkLThSjAQ==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-darwin-arm64@2.6.2:
+    resolution:
+      {
+        integrity: sha512-nmok2LnAd6nLUKI16aEB9ydMC6Lidiiq2m1nEBDR1LaaP7FGs4AJ90qDraxX+CWlVuRlvNjyYJTNv8qFjtL9+A==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-darwin-x64@2.6.2:
+    resolution:
+      {
+        integrity: sha512-GInyZLjgWDfsVT6+SHxQVRwNzV0AuA1uqGsOAW+0th56J7Nh6bHHKXHBWzUrihxMetcFDmQMAX1tZ1fZDYSRsw==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm-gnueabihf@2.6.2:
+    resolution:
+      {
+        integrity: sha512-YIV3u/R9zJbpqTTNwTZM5/ocWetDKGsro0SWp70eGEM9eV2MerWyBRZnQIgzU3YBnSBQ1RcxRZvY/UxwESfZIw==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm64-gnu@2.6.2:
+    resolution:
+      {
+        integrity: sha512-zc2BlJSim7YR4FZDQ8OUoJg5holYzdiYMeobb9pJuGDidGL9KZUv7SbiD4E8oZogtYY42UZEap7dqkkYuA91pg==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm64-musl@2.6.2:
+    resolution:
+      {
+        integrity: sha512-3h3dLPWNgSsD4lQBJPb4f+kvdOSJHa5PjTYVsWHxLUzH4IFTJUAnmuWpw4KqyQ3NA5QCyhw4TWgxk3jRkQxEKg==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-x64-gnu@2.6.2:
+    resolution:
+      {
+        integrity: sha512-IVUe+ckIerA7xMZ50duAZzwf1U7khQe2E0QpUxu5MBJNao5RqC0zwV/Zm965vw6D3gGFUl7j4m+oJjubBVoftw==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-x64-musl@2.6.2:
+    resolution:
+      {
+        integrity: sha512-UOf83vqTzoYQO9SZ0fPl2ZIFtNIz/Rr/y+7X8XRX1ZnBYsQ/tTb+cj9TE+KHOdmlTFBxhYzVkP2lRByCzqi4jQ==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-arm64-msvc@2.6.2:
+    resolution:
+      {
+        integrity: sha512-7C/RSgCa+7vqZ7qAbItfiaAWhyRSoD4l4BQAbVDqRRsRgY+S+hgS3in0Rxr7IorKUpGE69X48q6/nOAuTJQxeQ==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-ia32-msvc@2.6.2:
+    resolution:
+      {
+        integrity: sha512-har4aPAlvjnLcil40AC77YDIk6loMawuJwFINEM7n0pZviwMkMvjb2W5ZirsNOZY4aDbo5tLx0wNMREp5Brk+w==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-x64-msvc@2.6.2:
+    resolution:
+      {
+        integrity: sha512-ZXtYhtUr5SSaBrUDq7DiyjOFJqBVL/dOBN7N/qmi/pO0IgiWW/f/ue3nbvu9joWE5aAKDoIzy/CxsY0suwGosQ==,
+      }
+    engines: { node: '>= 10' }
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js@2.6.2:
+    resolution:
+      {
+        integrity: sha512-xBaJish5OeGmniDj9cW5PRa/PtmuVU3ziqrbr5xJj901ZDN4TosrVaNZpEiLZAxdfnhAe7uQ7QFWfjPe9d9K2Q==,
+      }
+    engines: { node: '>= 10' }
+    optionalDependencies:
+      '@resvg/resvg-js-android-arm-eabi': 2.6.2
+      '@resvg/resvg-js-android-arm64': 2.6.2
+      '@resvg/resvg-js-darwin-arm64': 2.6.2
+      '@resvg/resvg-js-darwin-x64': 2.6.2
+      '@resvg/resvg-js-linux-arm-gnueabihf': 2.6.2
+      '@resvg/resvg-js-linux-arm64-gnu': 2.6.2
+      '@resvg/resvg-js-linux-arm64-musl': 2.6.2
+      '@resvg/resvg-js-linux-x64-gnu': 2.6.2
+      '@resvg/resvg-js-linux-x64-musl': 2.6.2
+      '@resvg/resvg-js-win32-arm64-msvc': 2.6.2
+      '@resvg/resvg-js-win32-ia32-msvc': 2.6.2
+      '@resvg/resvg-js-win32-x64-msvc': 2.6.2
+    dev: false
 
   /@resvg/resvg-wasm@2.4.0:
     resolution:
@@ -5858,10 +6031,10 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@svelte.kit/adapter-aws@0.4.3(svelte@4.2.13)(vite@5.2.8):
+  /@svelte.kit/adapter-aws@0.5.0(svelte@4.2.13)(vite@5.2.8):
     resolution:
       {
-        integrity: sha512-yCn2zyxPRc8TzgZF5FXfO1gAgTv1uz7Q02gvyxFaF2uyQFZfZB7HhLop0VK5jrIcBpwVMNfwHnK7RiS3WuL8nA==,
+        integrity: sha512-ryDFz2u6Xr6sAaqJ3CoZ6CdMqcE6W87e1dEBPaAPUKqELdDKLV7ekGDTTHw6j/yR0q0P44Ua2uXc67V+I/P0QA==,
       }
     engines: { node: '>=18', pnpm: ^8.0.0 }
     dependencies:
@@ -5875,10 +6048,10 @@ packages:
       - vite
     dev: true
 
-  /@svelte.kit/cdk@0.4.3(svelte@4.2.13)(vite@5.2.8):
+  /@svelte.kit/cdk@0.5.0(svelte@4.2.13)(vite@5.2.8):
     resolution:
       {
-        integrity: sha512-ucY0vAHTKdV2dfP2r6XwdHPyucEOoTGNlTeUbMyTUiNTuGK5YeyAfsgdCbH/HGVw+Ow+JoXqRuZS+o4w5Hb0UQ==,
+        integrity: sha512-i9uCfKpaf3SomB786Z0bxQAgTJE1rzZjrBpabYI9zHOgEjTx2F/xK136gJZu3R+K55TjZbrIeLsQALK3wtQswA==,
       }
     dependencies:
       '@aws-cdk/aws-apigatewayv2-alpha': 2.109.0-alpha.0(aws-cdk-lib@2.137.0)(constructs@10.3.0)
@@ -7027,7 +7200,7 @@ packages:
       }
     engines: { node: '>=4' }
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /astring@1.8.6:
@@ -8200,7 +8373,6 @@ packages:
       {
         integrity: sha512-OUepMozQULMLUmhxS95Vudo0jb0UchLimi3+pQ2plj61Fcy8axbP9hbiD4Sz6DPqn6XG3kfmziVfQ1rSys5AJQ==,
       }
-    dev: true
 
   /dedent@0.7.0:
     resolution:
@@ -11609,8 +11781,7 @@ packages:
         integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==,
       }
     dependencies:
-      tslib: 2.6.1
-    dev: true
+      tslib: 2.6.2
 
   /lru-cache@10.2.0:
     resolution:
@@ -12957,8 +13128,7 @@ packages:
       }
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.6.1
-    dev: true
+      tslib: 2.6.2
 
   /node-domexception@1.0.0:
     resolution:
@@ -13388,8 +13558,7 @@ packages:
       }
     dependencies:
       no-case: 3.0.4
-      tslib: 2.6.1
-    dev: true
+      tslib: 2.6.2
 
   /path-exists@4.0.0:
     resolution:
@@ -14065,7 +14234,7 @@ packages:
       esprima: 4.0.1
       source-map: 0.6.1
       tiny-invariant: 1.3.3
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /redent@3.0.0:
@@ -14506,6 +14675,25 @@ packages:
       }
     dependencies:
       ultrahtml: 1.5.3
+    dev: false
+
+  /satori@0.10.13:
+    resolution:
+      {
+        integrity: sha512-klCwkVYMQ/ZN5inJLHzrUmGwoRfsdP7idB5hfpJ1jfiJk1ErDitK8Hkc6Kll1+Ox2WtqEuGecSZLnmup3CGzvQ==,
+      }
+    engines: { node: '>=16' }
+    dependencies:
+      '@shuding/opentype.js': 1.4.0-beta.0
+      css-background-parser: 0.1.0
+      css-box-shadow: 1.0.0-3
+      css-to-react-native: 3.2.0
+      emoji-regex: 10.3.0
+      escape-html: 1.0.3
+      linebreak: 1.1.0
+      parse-css-color: 0.2.1
+      postcss-value-parser: 4.2.0
+      yoga-wasm-web: 0.3.3
     dev: false
 
   /satori@0.10.9:
@@ -15329,7 +15517,6 @@ packages:
       pascal-case: 3.1.2
       svelte: 4.2.13
       typescript: 5.1.6
-    dev: true
 
   /svelte@4.2.13:
     resolution:
@@ -15706,6 +15893,7 @@ packages:
       {
         integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==,
       }
+    dev: true
 
   /tslib@2.6.2:
     resolution:

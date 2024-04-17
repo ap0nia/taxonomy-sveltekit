@@ -23,6 +23,11 @@ const sentryBundlerPluginCore = '@sentry/bundler-plugin-core'
 const config = {
   kit: {
     adapter: adapter({
+      esbuild: {
+        loader: {
+          '.node': 'copy',
+        },
+      },
       stream: true,
       lambdaUpload: (directory) => {
         const lambdaNodeModules = path.join(directory, 'node_modules')

@@ -4,7 +4,9 @@
   import { socials } from '$lib/config/site'
   import type { OgParamsSchema } from '$lib/models/og-params'
 
-  interface $$Props extends OgParamsSchema {}
+  interface $$Props extends OgParamsSchema {
+    origin?: string
+  }
 
   const backgrounds = {
     light: 'white',
@@ -17,7 +19,7 @@
 
   export let heading: $$Props['heading'] = ''
 
-  export let origin = ''
+  export let origin: $$Props['origin'] = ''
 
   $: paint = mode === 'dark' ? '#fff' : '#000'
   $: fontSize = heading.length > 100 ? '70px' : '100px'

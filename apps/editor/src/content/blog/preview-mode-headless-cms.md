@@ -76,7 +76,7 @@ It's probably important that images look okay here by default as well:
   src="/images/blog/blog-post-4.jpg"
   width="718"
   height="404"
-  alt="Image"
+  alt="blog post thumbnail"
 />
 
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
