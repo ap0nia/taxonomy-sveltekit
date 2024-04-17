@@ -31,6 +31,7 @@
     "@auth/core": "^0.29.0",
     "@google-cloud/recaptcha-enterprise": "^5.6.0",
     "@libsql/client": "^0.6.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@sentry/sveltekit": "^7.110.0",
     "@sinclair/typebox": "^0.32.20",
     "@tanstack/svelte-query": "^5.29.0",

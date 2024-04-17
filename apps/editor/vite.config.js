@@ -22,6 +22,17 @@ const config = defineConfig({
       allow: ['.contentlayer'],
     },
   },
+
+  /**
+   * @taxonomy/vercel-og Uses resvg to generate SVGs, but has issues with bundling.
+   *
+   * @see https://github.com/sveltejs/kit/issues/11416#issuecomment-1969378502
+   */
+  build: {
+    rollupOptions: {
+      external: ['@resvg/resvg-js'],
+    },
+  },
 })
 
 export default config

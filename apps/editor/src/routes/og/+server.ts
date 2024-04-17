@@ -2,6 +2,7 @@ import { error } from '@sveltejs/kit'
 import { SvelteImageResponse } from '@taxonomy/vercel-og'
 
 import OgCard from '$lib/components/og-card.svelte'
+import { dimensions } from '$lib/config/og'
 import { ogParamsSchema } from '$lib/models/og-params'
 
 import type { RequestHandler } from './$types'
@@ -38,8 +39,7 @@ export const GET: RequestHandler = async (event) => {
       origin,
     },
     {
-      width: 1200,
-      height: 630,
+      ...dimensions,
       fonts: [
         {
           name: 'Inter',
