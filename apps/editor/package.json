@@ -21,7 +21,8 @@
     "dep": "cdk --app 'npx tsx tools/cdk/index.ts' deploy",
     "des": "cdk --app 'npx tsx tools/cdk/index.ts' destroy",
     "lint:lang": "inlang lint --project project.inlang",
-    "translate": "inlang machine translate --project project.inlang --force"
+    "translate": "inlang machine translate --project project.inlang --force",
+    "build:content": "contentlayer build"
   },
   "type": "module",
   "dependencies": {
