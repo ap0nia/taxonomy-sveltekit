@@ -63,7 +63,7 @@
         <div class="p-2 hidden sm:flex items-center gap-2 shrink-0">
           <div class="join ring-1 ring-base-content">
             <div class="join-item lg:rounded-r-0">
-              <ThemeToggle class="lg:rounded-r-none" />
+              <ThemeToggle class="h-10 lg:rounded-r-none" />
             </div>
 
             <div class="divider divider-horizontal join-item m-0 w-0 hidden xl:flex" />

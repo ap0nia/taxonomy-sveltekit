@@ -4,8 +4,11 @@
   import MenuRoundedIcon from '~icons/material-symbols/menu-rounded'
   import { afterNavigate } from '$app/navigation'
   import Logo from '$lib/components/icons/logo.svelte'
+  import LanguageSelect from '$lib/components/language-select.svelte'
   import ThemeSelect from '$lib/components/theme/select.svelte'
   import ThemeToggle from '$lib/components/theme/toggle.svelte'
+  import { messages } from '$lib/config/language'
+  import { headerLinks } from '$lib/config/links/documentation-header'
 
   let open = false
 
@@ -26,7 +29,7 @@
 -->
 <Sheet.Root bind:open>
   <header class="flex justify-center border-b">
-    <div class="navbar max-w-7xl justify-between gap-4">
+    <div class="navbar max-w-7xl gap-4">
       <div class="navbar-start gap-2 w-auto">
         <Sheet.Trigger class="block sm:hidden btn btn-sm btn-ghost">
           <MenuRoundedIcon class="h-6 w-6 text-primary" />
@@ -38,22 +41,30 @@
         </a>
       </div>
 
-      <div class="navbar-center"></div>
+      <div class="navbar-center">
+        <ul class="menu menu-horizontal hidden px-1 sm:flex">
+          {#each headerLinks as { href, message } (href)}
+            <li>
+              <a {href}>{$messages(message)}</a>
+            </li>
+          {/each}
+        </ul>
+      </div>
 
-      <div class="navbar-end flex items-center gap-2">
-        <div class="p-2">
-          <div class="join ring-1 ring-base-content">
-            <div class="join-item lg:rounded-r-0">
-              <ThemeToggle class="lg:rounded-r-none" />
-            </div>
+      <div class="navbar-end flex items-center gap-2 flex-1">
+        <div class="join ring-1 ring-base-content">
+          <div class="join-item lg:rounded-r-0">
+            <ThemeToggle class="h-10 lg:rounded-r-none" />
+          </div>
 
-            <div class="divider divider-horizontal join-item m-0 w-0 hidden lg:flex" />
+          <div class="divider divider-horizontal join-item m-0 w-0 hidden xl:flex" />
 
-            <div class="join-item hidden lg:block">
-              <ThemeSelect triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
-            </div>
+          <div class="join-item hidden sm:block">
+            <ThemeSelect triggerClasses="min-w-32 ring-0 rounded-l-none" contentClasses="!w-56" />
           </div>
         </div>
+
+        <LanguageSelect />
       </div>
     </div>
   </header>

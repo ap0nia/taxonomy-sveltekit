@@ -1,6 +1,7 @@
 <script lang="ts">
   import { allBlogs } from 'contentlayer/generated'
-  import dayjs from 'dayjs'
+
+  import { dayjs } from '$lib/dayjs'
 
   const blogs = allBlogs
     .filter((post) => post.published)
@@ -9,7 +10,7 @@
     })
 </script>
 
-<div class="container max-w-4xl py-6 lg:py-10">
+<div class="container max-w-4xl py-6 lg:py-10 mx-auto">
   <div class="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
     <div class="flex-1 space-y-4">
       <h1 class="inline-block font-heading text-4xl tracking-tight lg:text-5xl">Blog</h1>
@@ -41,7 +42,7 @@
 
           {#if post.date}
             <p class="text-sm text-muted-foreground">
-              {dayjs(post.date).format()}
+              {dayjs(post.date).format('LL')}
             </p>
           {/if}
 
