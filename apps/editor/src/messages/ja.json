@@ -35,15 +35,16 @@
   "login": "ログイン",
   "sign_up": "サインアップ",
   "simple_pricing": "シンプルで透明な価格設定",
-  "unlock_all_features": "ブログへの無制限の投稿を含むすべての機能のロックを解除します。",
+  "unlock_all_features": "ブログの無制限の投稿を含むすべての機能のロックを解除します",
   "whats_included_pro": "PROプランに含まれるもの",
-  "unlimited_posts": "",
-  "custom_domain": "",
-  "dashboard_analytics": "",
+  "unlimited_posts": "投稿数無制限",
+  "custom_domain": "カスタムドメイン",
+  "dashboard_analytics": "ダッシュボード分析",
   "access_discord": "Discordへのアクセス",
   "premium_support": "プレミアムサポート",
   "pro_price": "19ドル",
   "billed_monthly": "毎月請求",
   "is_demo_app": "Taxonomyはデモアプリです",
-  "you_can_test": "アップグレードをテストできます。料金はかかりません"
+  "you_can_test": "アップグレードをテストできます。料金はかかりません",
+  "unlimited_users": "ユーザー数無制限"
 }
