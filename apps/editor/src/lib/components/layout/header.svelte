@@ -37,7 +37,7 @@
 -->
 <Sheet.Root bind:open>
   <header class="flex justify-center border-b">
-    <div class="navbar max-w-7xl justify-between gap-4">
+    <div class="navbar max-w-7xl gap-4">
       <div class="navbar-start gap-2 w-auto">
         <Sheet.Trigger class="block lg:hidden btn btn-sm btn-ghost">
           <MenuRoundedIcon class="h-6 w-6 text-primary" />
@@ -59,7 +59,7 @@
         </ul>
       </div>
 
-      <div class="navbar-end flex items-center gap-2">
+      <div class="navbar-end grow flex items-center gap-2">
         <div class="p-2 hidden sm:flex items-center gap-2 shrink-0">
           <div class="join ring-1 ring-base-content">
             <div class="join-item lg:rounded-r-0">
