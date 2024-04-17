@@ -12,11 +12,6 @@ export const load: PageLoad = async (event) => {
     console.error('Failed to load markdown module. ', error)
   })
 
-  console.log(
-    { blog, blogModule, slug },
-    allBlogs.map((b) => b.slug),
-  )
-
   if (blog == null || blogModule == null) {
     return error(404)
   }
@@ -24,6 +19,6 @@ export const load: PageLoad = async (event) => {
   return {
     component: blogModule.default,
     metadata: blogModule.metadata,
-    documentation: blog,
+    blog,
   }
 }
