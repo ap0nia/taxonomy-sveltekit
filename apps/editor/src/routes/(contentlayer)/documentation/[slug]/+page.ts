@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit'
 import { allDocumentations } from 'contentlayer/generated'
 
+import { getTableOfContents } from '$lib/utils/markdown-table-of-contents'
+
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async (event) => {
@@ -18,9 +20,12 @@ export const load: PageLoad = async (event) => {
     return error(404)
   }
 
+  const tableOfContents = await getTableOfContents(documentation.body.raw)
+
   return {
     component: documentationModule.default,
     metadata: documentationModule.metadata,
     documentation,
+    tableOfContents,
   }
 }

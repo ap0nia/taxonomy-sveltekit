@@ -1,4 +1,6 @@
 <script lang="ts">
+  import TableOfContents from '$lib/components/mdx/table-of-contents.svelte'
+
   import type { PageData } from './$types'
 
   export let data: PageData
@@ -26,9 +28,7 @@
   </div>
   <div class="hidden text-sm xl:block">
     <div class="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
-      <!--
-      <DashboardTableOfContents {toc} />
-      -->
+      <TableOfContents tableOfContents={data.tableOfContents} />
     </div>
   </div>
 </main>
