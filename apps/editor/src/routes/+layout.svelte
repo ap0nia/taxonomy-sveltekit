@@ -4,7 +4,6 @@
   import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit'
 
   import ThemeWatcher from '$lib/components/theme/watcher.svelte'
-  import { title } from '$lib/config/site'
   import { theme } from '$lib/config/themes'
   import { i18n } from '$lib/i18n.js'
 
@@ -19,10 +18,6 @@
 </script>
 
 <ThemeWatcher />
-
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
 
 <ParaglideJS {i18n}>
   <slot />
