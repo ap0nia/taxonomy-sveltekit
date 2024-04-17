@@ -42,7 +42,7 @@
       </div>
 
       <div class="navbar-center">
-        <ul class="menu menu-horizontal hidden px-1 sm:flex">
+        <ul class="menu menu-horizontal hidden px-1 sm:flex gap-1">
           {#each headerLinks as { href, message } (href)}
             <li>
               <a {href}>{$messages(message)}</a>
