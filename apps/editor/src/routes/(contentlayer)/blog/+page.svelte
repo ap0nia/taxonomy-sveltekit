@@ -20,9 +20,10 @@
     </div>
   </div>
   <hr class="my-8" />
+
   {#if blogs.length}
-    {#each blogs as post (post._id)}
-      <div class="grid gap-10 sm:grid-cols-2">
+    <div class="grid gap-10 sm:grid-cols-2">
+      {#each blogs as post (post._id)}
         <article class="group relative flex flex-col space-y-2">
           {#if post.image}
             <img
@@ -50,8 +51,8 @@
             <span class="sr-only">View Article</span>
           </a>
         </article>
-      </div>
-    {/each}
+      {/each}
+    </div>
   {:else}
     <p>No posts published.</p>
   {/if}
