@@ -9,7 +9,7 @@
   import { socials } from '$lib/config/site'
 </script>
 
-<div class="w-full my-8">
+<div class="w-full">
   <!-- Hero -->
   <section id="hero" class="hero py-8 md:py-12 lg:py-32">
     <div class="hero-content">
