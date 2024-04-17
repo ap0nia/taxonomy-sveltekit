@@ -5,6 +5,6 @@ export const headerLinks = [
   },
   {
     message: 'guides',
-    href: '/documentation/guides',
+    href: '/guides',
   },
 ] as const
