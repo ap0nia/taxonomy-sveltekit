@@ -83,9 +83,49 @@ export const Blog = defineDocumentType(() => ({
   },
 }))
 
+export const Guide = defineDocumentType(() => ({
+  name: 'Guide',
+  filePathPattern: `guides/**/*.md`,
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+    },
+    date: {
+      type: 'date',
+      required: true,
+    },
+    published: {
+      type: 'boolean',
+      default: true,
+    },
+    featured: {
+      type: 'boolean',
+      default: false,
+    },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (documentation) => {
+        return documentation._raw.sourceFilePath.slice('guides/'.length).replace(/\.md$/, '')
+      },
+    },
+    url: {
+      type: 'string',
+      resolve: (documentation) => {
+        return `/${documentation._raw.sourceFilePath.replace(/\.md$/, '')}`
+      },
+    },
+  },
+}))
+
 const config = makeSource({
   contentDirPath: './src/content',
-  documentTypes: [Blog, Documentation],
+  documentTypes: [Blog, Documentation, Guide],
 })
 
 export default config

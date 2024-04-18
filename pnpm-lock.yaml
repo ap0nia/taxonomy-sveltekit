@@ -188,6 +188,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.12
         version: 0.5.12(tailwindcss@3.4.3)
+      '@taxonomy/vite-plugin-contentlayer':
+        specifier: workspace:^
+        version: link:../../packages/vite-plugin-contentlayer
       '@types/grecaptcha':
         specifier: ^3.0.9
         version: 3.0.9
@@ -412,6 +415,22 @@ importers:
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
+
+  packages/vite-plugin-contentlayer:
+    dependencies:
+      '@contentlayer/core':
+        specifier: ^0.3.4
+        version: 0.3.4(esbuild@0.20.2)
+      '@contentlayer/utils':
+        specifier: ^0.3.4
+        version: 0.3.4
+    devDependencies:
+      '@taxonomy/tsconfig':
+        specifier: workspace:^
+        version: link:../tsconfig
+      vite:
+        specifier: ^5.2.8
+        version: 5.2.8(@types/node@20.4.5)
 
 packages:
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -2183,7 +2202,6 @@ packages:
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - supports-color
-    dev: true
 
   /@contentlayer/source-files@0.3.4(esbuild@0.20.2):
     resolution:
@@ -2259,7 +2277,6 @@ packages:
       oo-ascii-tree: 1.97.0
       ts-pattern: 4.3.0
       type-fest: 3.13.1
-    dev: true
 
   /@cspotcode/source-map-support@0.8.1:
     resolution:
@@ -2278,7 +2295,6 @@ packages:
       }
     dependencies:
       '@effect-ts/system': 0.57.5
-    dev: true
 
   /@effect-ts/otel-exporter-trace-otlp-grpc@0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.8.0)(@opentelemetry/core@1.23.0)(@opentelemetry/exporter-trace-otlp-grpc@0.39.1)(@opentelemetry/sdk-trace-base@1.23.0):
     resolution:
@@ -2298,7 +2314,6 @@ packages:
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/exporter-trace-otlp-grpc': 0.39.1(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.23.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@effect-ts/otel-sdk-trace-node@0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.8.0)(@opentelemetry/core@1.23.0)(@opentelemetry/sdk-trace-base@1.23.0)(@opentelemetry/sdk-trace-node@1.23.0):
     resolution:
@@ -2318,7 +2333,6 @@ packages:
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-node': 1.23.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@effect-ts/otel@0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.8.0)(@opentelemetry/core@1.23.0)(@opentelemetry/sdk-trace-base@1.23.0):
     resolution:
@@ -2335,14 +2349,12 @@ packages:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.23.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@effect-ts/system@0.57.5:
     resolution:
       {
         integrity: sha512-/crHGujo0xnuHIYNc1VgP0HGJGFSoSqq88JFXe6FmFyXPpWt8Xu39LyLg7rchsxfXFeEdA9CrIZvLV5eswXV5g==,
       }
-    dev: true
 
   /@esbuild-plugins/node-resolve@0.1.4(esbuild@0.20.2):
     resolution:
@@ -2359,7 +2371,6 @@ packages:
       resolve: 1.22.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@esbuild/aix-ppc64@0.19.12:
     resolution:
@@ -3216,7 +3227,6 @@ packages:
       {
         integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==,
       }
-    dev: true
 
   /@fastify/busboy@2.1.1:
     resolution:
@@ -3704,7 +3714,6 @@ packages:
     dependencies:
       jsbi: 4.3.0
       tslib: 2.6.2
-    dev: true
 
   /@libsql/client@0.6.0:
     resolution:
@@ -3909,7 +3918,6 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@mdx-js/mdx@2.3.0:
     resolution:
@@ -3936,7 +3944,6 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@melt-ui/svelte@0.76.2(svelte@4.2.13):
     resolution:
@@ -4340,7 +4347,6 @@ packages:
     engines: { node: '>=14' }
     dependencies:
       '@opentelemetry/api': 1.8.0
-    dev: true
 
   /@opentelemetry/api@1.8.0:
     resolution:
@@ -4359,7 +4365,6 @@ packages:
       '@opentelemetry/api': '>=1.0.0 <1.9.0'
     dependencies:
       '@opentelemetry/api': 1.8.0
-    dev: true
 
   /@opentelemetry/core@1.13.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4372,7 +4377,6 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/semantic-conventions': 1.13.0
-    dev: true
 
   /@opentelemetry/core@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4385,7 +4389,6 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/semantic-conventions': 1.23.0
-    dev: true
 
   /@opentelemetry/exporter-trace-otlp-grpc@0.39.1(@opentelemetry/api@1.8.0):
     resolution:
@@ -4403,7 +4406,6 @@ packages:
       '@opentelemetry/otlp-transformer': 0.39.1(@opentelemetry/api@1.8.0)
       '@opentelemetry/resources': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.13.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/otlp-exporter-base@0.39.1(@opentelemetry/api@1.8.0):
     resolution:
@@ -4416,7 +4418,6 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/otlp-grpc-exporter-base@0.39.1(@opentelemetry/api@1.8.0):
     resolution:
@@ -4432,7 +4433,6 @@ packages:
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/otlp-exporter-base': 0.39.1(@opentelemetry/api@1.8.0)
       protobufjs: 7.2.6
-    dev: true
 
   /@opentelemetry/otlp-transformer@0.39.1(@opentelemetry/api@1.8.0):
     resolution:
@@ -4450,7 +4450,6 @@ packages:
       '@opentelemetry/sdk-logs': 0.39.1(@opentelemetry/api-logs@0.39.1)(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-metrics': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.13.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/propagator-b3@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4463,7 +4462,6 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/propagator-jaeger@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4476,7 +4474,6 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/resources@1.13.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4490,7 +4487,6 @@ packages:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.13.0
-    dev: true
 
   /@opentelemetry/resources@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4504,7 +4500,6 @@ packages:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.23.0
-    dev: true
 
   /@opentelemetry/sdk-logs@0.39.1(@opentelemetry/api-logs@0.39.1)(@opentelemetry/api@1.8.0):
     resolution:
@@ -4520,7 +4515,6 @@ packages:
       '@opentelemetry/api-logs': 0.39.1
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/resources': 1.13.0(@opentelemetry/api@1.8.0)
-    dev: true
 
   /@opentelemetry/sdk-metrics@1.13.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4535,7 +4529,6 @@ packages:
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/resources': 1.13.0(@opentelemetry/api@1.8.0)
       lodash.merge: 4.6.2
-    dev: true
 
   /@opentelemetry/sdk-trace-base@1.13.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4550,7 +4543,6 @@ packages:
       '@opentelemetry/core': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/resources': 1.13.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.13.0
-    dev: true
 
   /@opentelemetry/sdk-trace-base@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4565,7 +4557,6 @@ packages:
       '@opentelemetry/core': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/resources': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.23.0
-    dev: true
 
   /@opentelemetry/sdk-trace-node@1.23.0(@opentelemetry/api@1.8.0):
     resolution:
@@ -4583,7 +4574,6 @@ packages:
       '@opentelemetry/propagator-jaeger': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.23.0(@opentelemetry/api@1.8.0)
       semver: 7.6.0
-    dev: true
 
   /@opentelemetry/semantic-conventions@1.13.0:
     resolution:
@@ -4591,7 +4581,6 @@ packages:
         integrity: sha512-LMGqfSZkaMQXqewO0o1wvWr/2fQdCh4a3Sqlxka/UsJCe0cfLulh6x2aqnKLnsrSGiCq5rSCwvINd152i0nCqw==,
       }
     engines: { node: '>=14' }
-    dev: true
 
   /@opentelemetry/semantic-conventions@1.23.0:
     resolution:
@@ -4599,7 +4588,6 @@ packages:
         integrity: sha512-MiqFvfOzfR31t8cc74CTP1OZfz7MbqpAnLCra8NqQoaHJX6ncIRTdYOQYBDQ2uFISDq0WY8Y9dDTWvsgzzBYRg==,
       }
     engines: { node: '>=14' }
-    dev: true
 
   /@panva/hkdf@1.1.1:
     resolution:
@@ -6297,7 +6285,6 @@ packages:
       }
     dependencies:
       '@types/estree': 1.0.5
-    dev: true
 
   /@types/aws-lambda@8.10.137:
     resolution:
@@ -6390,7 +6377,6 @@ packages:
       }
     dependencies:
       '@types/estree': 1.0.5
-    dev: true
 
   /@types/estree@1.0.5:
     resolution:
@@ -6412,7 +6398,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /@types/is-ci@3.0.0:
     resolution:
@@ -6474,7 +6459,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /@types/mdast@4.0.3:
     resolution:
@@ -6489,7 +6473,6 @@ packages:
       {
         integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==,
       }
-    dev: true
 
   /@types/minimist@1.2.2:
     resolution:
@@ -6538,7 +6521,6 @@ packages:
       {
         integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==,
       }
-    dev: true
 
   /@types/pug@2.0.10:
     resolution:
@@ -6564,7 +6546,6 @@ packages:
       {
         integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==,
       }
-    dev: true
 
   /@types/semver@7.5.0:
     resolution:
@@ -6599,7 +6580,6 @@ packages:
       {
         integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==,
       }
-    dev: true
 
   /@types/unist@3.0.2:
     resolution:
@@ -6908,7 +6888,6 @@ packages:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       acorn: 8.11.3
-    dev: true
 
   /acorn-walk@8.2.0:
     resolution:
@@ -7104,14 +7083,12 @@ packages:
       }
     dependencies:
       sprintf-js: 1.0.3
-    dev: true
 
   /argparse@2.0.1:
     resolution:
       {
         integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==,
       }
-    dev: true
 
   /aria-query@5.3.0:
     resolution:
@@ -7143,7 +7120,6 @@ packages:
       {
         integrity: sha512-/+3GRL7dDAGEfM6TseQk/U+mi18TU2Ms9I3UlLdUMhz2hbvGNTKdj9xniwXfUqgYhHxRx0+8UnKkvlNwVU+cWQ==,
       }
-    dev: true
 
   /array-union@2.1.0:
     resolution:
@@ -7212,7 +7188,6 @@ packages:
         integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==,
       }
     hasBin: true
-    dev: true
 
   /async-lock@1.4.1:
     resolution:
@@ -7490,7 +7465,6 @@ packages:
       {
         integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==,
       }
-    dev: true
 
   /buffer@5.7.1:
     resolution:
@@ -7544,7 +7518,6 @@ packages:
     dependencies:
       pascal-case: 3.1.2
       tslib: 2.6.2
-    dev: true
 
   /camelcase-css@2.0.1:
     resolution:
@@ -7592,7 +7565,6 @@ packages:
       {
         integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==,
       }
-    dev: true
 
   /chai@4.3.7:
     resolution:
@@ -7646,14 +7618,12 @@ packages:
       {
         integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==,
       }
-    dev: true
 
   /character-entities-legacy@3.0.0:
     resolution:
       {
         integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==,
       }
-    dev: true
 
   /character-entities@2.0.2:
     resolution:
@@ -7666,7 +7636,6 @@ packages:
       {
         integrity: sha512-iBZ4F4wRbyORVsu0jPV7gXkOsGYjGHPmAyv+HiHG8gi5PtC9KI2j1+v8/tlibRvjoWX027ypmG/n0HtO5t7unw==,
       }
-    dev: true
 
   /chardet@0.7.0:
     resolution:
@@ -7882,7 +7851,6 @@ packages:
       {
         integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==,
       }
-    dev: true
 
   /commander@11.0.0:
     resolution:
@@ -7927,7 +7895,6 @@ packages:
       esprima: 4.0.1
       has-own-prop: 2.0.0
       repeat-string: 1.6.1
-    dev: true
 
   /commitizen@4.3.0:
     resolution:
@@ -8090,7 +8057,6 @@ packages:
       {
         integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==,
       }
-    dev: true
 
   /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.5)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.1.6):
     resolution:
@@ -8555,7 +8521,6 @@ packages:
         integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==,
       }
     engines: { node: '>=0.3.1' }
-    dev: true
 
   /dir-glob@3.0.1:
     resolution:
@@ -9024,7 +8989,6 @@ packages:
         integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==,
       }
     engines: { node: '>=10' }
-    dev: true
 
   /eslint-compat-utils@0.5.0(eslint@8.57.0):
     resolution:
@@ -9224,7 +9188,6 @@ packages:
       }
     dependencies:
       '@types/estree': 1.0.5
-    dev: true
 
   /estree-util-build-jsx@2.2.2:
     resolution:
@@ -9235,21 +9198,18 @@ packages:
       '@types/estree-jsx': 1.0.5
       estree-util-is-identifier-name: 2.1.0
       estree-walker: 3.0.3
-    dev: true
 
   /estree-util-is-identifier-name@1.1.0:
     resolution:
       {
         integrity: sha512-OVJZ3fGGt9By77Ix9NhaRbzfbDV/2rx9EP7YIDJTmsZSEc5kYn2vWcNccYyahJL2uAQZK2a5Or2i0wtIKTPoRQ==,
       }
-    dev: true
 
   /estree-util-is-identifier-name@2.1.0:
     resolution:
       {
         integrity: sha512-bEN9VHRyXAUOjkKVQVvArFym08BTWB0aJPppZZr0UNyAqWsLaVfAqP7hbaTJjzHifmB5ebnR8Wm7r7yGN/HonQ==,
       }
-    dev: true
 
   /estree-util-to-js@1.2.0:
     resolution:
@@ -9260,7 +9220,6 @@ packages:
       '@types/estree-jsx': 1.0.5
       astring: 1.8.6
       source-map: 0.7.4
-    dev: true
 
   /estree-util-value-to-estree@1.3.0:
     resolution:
@@ -9270,7 +9229,6 @@ packages:
     engines: { node: '>=12.0.0' }
     dependencies:
       is-plain-obj: 3.0.0
-    dev: true
 
   /estree-util-visit@1.2.1:
     resolution:
@@ -9280,7 +9238,6 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.5
       '@types/unist': 2.0.10
-    dev: true
 
   /estree-walker@2.0.2:
     resolution:
@@ -9391,7 +9348,6 @@ packages:
     engines: { node: '>=0.10.0' }
     dependencies:
       is-extendable: 0.1.1
-    dev: true
 
   /extend@3.0.2:
     resolution:
@@ -9500,7 +9456,6 @@ packages:
       }
     dependencies:
       format: 0.2.2
-    dev: true
 
   /fetch-blob@3.2.0:
     resolution:
@@ -9699,7 +9654,6 @@ packages:
         integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==,
       }
     engines: { node: '>=0.4.x' }
-    dev: true
 
   /formdata-polyfill@4.0.10:
     resolution:
@@ -9771,7 +9725,6 @@ packages:
       {
         integrity: sha512-8uMbBjrhzW76TYgEV27Y5E//W2f/lTFmx78P2w19FZSxarhI/798APGQyuGCwmkNxgwGRhrLfvWyLBvNtuOmew==,
       }
-    dev: true
 
   /fs.realpath@1.0.0:
     resolution:
@@ -10201,7 +10154,6 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
-    dev: true
 
   /gtoken@7.1.0:
     resolution:
@@ -10262,7 +10214,6 @@ packages:
         integrity: sha512-Pq0h+hvsVm6dDEa8x82GnLSYHOzNDt7f0ddFa3FqcQlgzEiptPqL+XrOJNavjOzSYiYWIrgeVYYgGlLmnxwilQ==,
       }
     engines: { node: '>=8' }
-    dev: true
 
   /has-property-descriptors@1.0.0:
     resolution:
@@ -10313,7 +10264,6 @@ packages:
       {
         integrity: sha512-HVusNXlVqHe0fzIzdQOGolnFN6mX/fqcrSAOcTBXdvzrXVHwTz11vXeKRmkR5gTuwVpvHZEIyKoePDvuAR+XwQ==,
       }
-    dev: true
 
   /hast-util-from-parse5@7.1.2:
     resolution:
@@ -10328,7 +10278,6 @@ packages:
       vfile: 5.3.7
       vfile-location: 4.1.0
       web-namespaces: 2.0.1
-    dev: true
 
   /hast-util-parse-selector@3.1.1:
     resolution:
@@ -10337,7 +10286,6 @@ packages:
       }
     dependencies:
       '@types/hast': 2.3.10
-    dev: true
 
   /hast-util-raw@7.2.3:
     resolution:
@@ -10356,7 +10304,6 @@ packages:
       vfile: 5.3.7
       web-namespaces: 2.0.1
       zwitch: 2.0.4
-    dev: true
 
   /hast-util-to-estree@2.3.3:
     resolution:
@@ -10381,7 +10328,6 @@ packages:
       zwitch: 2.0.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /hast-util-to-html@8.0.4:
     resolution:
@@ -10400,7 +10346,6 @@ packages:
       space-separated-tokens: 2.0.2
       stringify-entities: 4.0.4
       zwitch: 2.0.4
-    dev: true
 
   /hast-util-to-parse5@7.1.0:
     resolution:
@@ -10414,14 +10359,12 @@ packages:
       space-separated-tokens: 2.0.2
       web-namespaces: 2.0.1
       zwitch: 2.0.4
-    dev: true
 
   /hast-util-whitespace@2.0.1:
     resolution:
       {
         integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==,
       }
-    dev: true
 
   /hastscript@7.2.0:
     resolution:
@@ -10434,7 +10377,6 @@ packages:
       hast-util-parse-selector: 3.1.1
       property-information: 6.5.0
       space-separated-tokens: 2.0.2
-    dev: true
 
   /hex-rgb@4.3.0:
     resolution:
@@ -10483,7 +10425,6 @@ packages:
       {
         integrity: sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==,
       }
-    dev: true
 
   /http-proxy-agent@5.0.0:
     resolution:
@@ -10651,7 +10592,6 @@ packages:
         integrity: sha512-wzkZHqpb4eGrOKBl34xy3umnYHx8Si5R1U4fwmdxLo5gdH6mEK8gclckTj/qWqy4Je0bsDYe/qazZYuO7xe3XQ==,
       }
     engines: { node: '>=14.0.0' }
-    dev: true
 
   /inflight@1.0.6:
     resolution:
@@ -10680,7 +10620,6 @@ packages:
       {
         integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==,
       }
-    dev: true
 
   /inquirer@8.2.5:
     resolution:
@@ -10723,7 +10662,6 @@ packages:
       {
         integrity: sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==,
       }
-    dev: true
 
   /is-alphanumerical@2.0.1:
     resolution:
@@ -10733,7 +10671,6 @@ packages:
     dependencies:
       is-alphabetical: 2.0.1
       is-decimal: 2.0.1
-    dev: true
 
   /is-array-buffer@3.0.2:
     resolution:
@@ -10789,7 +10726,6 @@ packages:
         integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==,
       }
     engines: { node: '>=4' }
-    dev: true
 
   /is-callable@1.2.7:
     resolution:
@@ -10832,7 +10768,6 @@ packages:
       {
         integrity: sha512-AAB9hiomQs5DXWcRB1rqsxGUstbRroFOPPVAomNk/3XHR5JyEZChOyTWe2oayKnsSsr/kcGqF+z6yuH6HHpN0A==,
       }
-    dev: true
 
   /is-extendable@0.1.1:
     resolution:
@@ -10840,7 +10775,6 @@ packages:
         integrity: sha512-5BMULNob1vgFX6EjQw5izWDxrecWK9AM72rugNr0TFldMOi0fj6Jk+zeKIt0xGj4cEfQIJth4w3OKWOJ4f+AFw==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /is-extglob@2.1.1:
     resolution:
@@ -10878,7 +10812,6 @@ packages:
       {
         integrity: sha512-DgZQp241c8oO6cA1SbTEWiXeoxV42vlcJxgH+B3hi1AiqqKruZR3ZGF8In3fj4+/y/7rHvlOZLZtgJ/4ttYGZg==,
       }
-    dev: true
 
   /is-interactive@1.0.0:
     resolution:
@@ -10943,7 +10876,6 @@ packages:
         integrity: sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==,
       }
     engines: { node: '>=10' }
-    dev: true
 
   /is-plain-obj@4.1.0:
     resolution:
@@ -11192,7 +11124,6 @@ packages:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
-    dev: true
 
   /js-yaml@4.1.0:
     resolution:
@@ -11202,14 +11133,12 @@ packages:
     hasBin: true
     dependencies:
       argparse: 2.0.1
-    dev: true
 
   /jsbi@4.3.0:
     resolution:
       {
         integrity: sha512-SnZNcinB4RIcnEyZqFPdGPVgrg2AcnykiBy0sHVJQKHYeaLUvi3Exj+iaPpLnFVkDPZIV4U0yvgC9/R4uEAZ9g==,
       }
-    dev: true
 
   /jsesc@2.5.2:
     resolution:
@@ -11386,7 +11315,6 @@ packages:
         integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /kleur@4.1.5:
     resolution:
@@ -11671,7 +11599,6 @@ packages:
       {
         integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==,
       }
-    dev: true
 
   /lodash.mergewith@4.6.2:
     resolution:
@@ -11820,7 +11747,6 @@ packages:
     engines: { node: '>=10' }
     dependencies:
       yallist: 4.0.0
-    dev: true
 
   /lucide-svelte@0.368.0(svelte@4.2.13):
     resolution:
@@ -11922,7 +11848,6 @@ packages:
         integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /mdast-util-definitions@5.1.2:
     resolution:
@@ -11933,7 +11858,6 @@ packages:
       '@types/mdast': 3.0.15
       '@types/unist': 2.0.10
       unist-util-visit: 4.1.2
-    dev: true
 
   /mdast-util-from-markdown@1.3.1:
     resolution:
@@ -11955,7 +11879,6 @@ packages:
       uvu: 0.5.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /mdast-util-from-markdown@2.0.0:
     resolution:
@@ -11988,7 +11911,6 @@ packages:
       '@types/mdast': 3.0.15
       mdast-util-to-markdown: 1.5.0
       micromark-extension-frontmatter: 1.1.1
-    dev: true
 
   /mdast-util-mdx-expression@1.3.2:
     resolution:
@@ -12003,7 +11925,6 @@ packages:
       mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /mdast-util-mdx-jsx@2.1.4:
     resolution:
@@ -12025,7 +11946,6 @@ packages:
       vfile-message: 3.1.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /mdast-util-mdx@2.0.1:
     resolution:
@@ -12040,7 +11960,6 @@ packages:
       mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /mdast-util-mdxjs-esm@1.3.1:
     resolution:
@@ -12055,7 +11974,6 @@ packages:
       mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /mdast-util-phrasing@3.0.1:
     resolution:
@@ -12065,7 +11983,6 @@ packages:
     dependencies:
       '@types/mdast': 3.0.15
       unist-util-is: 5.2.1
-    dev: true
 
   /mdast-util-phrasing@4.1.0:
     resolution:
@@ -12091,7 +12008,6 @@ packages:
       unist-util-generated: 2.0.1
       unist-util-position: 4.0.4
       unist-util-visit: 4.1.2
-    dev: true
 
   /mdast-util-to-markdown@1.5.0:
     resolution:
@@ -12107,7 +12023,6 @@ packages:
       micromark-util-decode-string: 1.1.0
       unist-util-visit: 4.1.2
       zwitch: 2.0.4
-    dev: true
 
   /mdast-util-to-markdown@2.1.0:
     resolution:
@@ -12132,7 +12047,6 @@ packages:
       }
     dependencies:
       '@types/mdast': 3.0.15
-    dev: true
 
   /mdast-util-to-string@4.0.0:
     resolution:
@@ -12200,7 +12114,6 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /memfs@3.5.3:
     resolution:
@@ -12210,7 +12123,6 @@ packages:
     engines: { node: '>= 4.0.0' }
     dependencies:
       fs-monkey: 1.0.5
-    dev: true
 
   /meow@6.1.1:
     resolution:
@@ -12295,7 +12207,6 @@ packages:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
       uvu: 0.5.6
-    dev: true
 
   /micromark-core-commonmark@2.0.0:
     resolution:
@@ -12331,7 +12242,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-extension-mdx-expression@1.0.8:
     resolution:
@@ -12347,7 +12257,6 @@ packages:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
       uvu: 0.5.6
-    dev: true
 
   /micromark-extension-mdx-jsx@1.0.5:
     resolution:
@@ -12365,7 +12274,6 @@ packages:
       micromark-util-types: 1.1.0
       uvu: 0.5.6
       vfile-message: 3.1.4
-    dev: true
 
   /micromark-extension-mdx-md@1.0.1:
     resolution:
@@ -12374,7 +12282,6 @@ packages:
       }
     dependencies:
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-extension-mdxjs-esm@1.0.5:
     resolution:
@@ -12391,7 +12298,6 @@ packages:
       unist-util-position-from-estree: 1.1.2
       uvu: 0.5.6
       vfile-message: 3.1.4
-    dev: true
 
   /micromark-extension-mdxjs@1.0.1:
     resolution:
@@ -12407,7 +12313,6 @@ packages:
       micromark-extension-mdxjs-esm: 1.0.5
       micromark-util-combine-extensions: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-factory-destination@1.1.0:
     resolution:
@@ -12418,7 +12323,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-factory-destination@2.0.0:
     resolution:
@@ -12441,7 +12345,6 @@ packages:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
       uvu: 0.5.6
-    dev: true
 
   /micromark-factory-label@2.0.0:
     resolution:
@@ -12469,7 +12372,6 @@ packages:
       unist-util-position-from-estree: 1.1.2
       uvu: 0.5.6
       vfile-message: 3.1.4
-    dev: true
 
   /micromark-factory-space@1.1.0:
     resolution:
@@ -12479,7 +12381,6 @@ packages:
     dependencies:
       micromark-util-character: 1.2.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-factory-space@2.0.0:
     resolution:
@@ -12501,7 +12402,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-factory-title@2.0.0:
     resolution:
@@ -12525,7 +12425,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-factory-whitespace@2.0.0:
     resolution:
@@ -12547,7 +12446,6 @@ packages:
     dependencies:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-util-character@2.1.0:
     resolution:
@@ -12566,7 +12464,6 @@ packages:
       }
     dependencies:
       micromark-util-symbol: 1.1.0
-    dev: true
 
   /micromark-util-chunked@2.0.0:
     resolution:
@@ -12586,7 +12483,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-util-classify-character@2.0.0:
     resolution:
@@ -12607,7 +12503,6 @@ packages:
     dependencies:
       micromark-util-chunked: 1.1.0
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-util-combine-extensions@2.0.0:
     resolution:
@@ -12626,7 +12521,6 @@ packages:
       }
     dependencies:
       micromark-util-symbol: 1.1.0
-    dev: true
 
   /micromark-util-decode-numeric-character-reference@2.0.1:
     resolution:
@@ -12647,7 +12541,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-decode-numeric-character-reference: 1.1.0
       micromark-util-symbol: 1.1.0
-    dev: true
 
   /micromark-util-decode-string@2.0.0:
     resolution:
@@ -12666,7 +12559,6 @@ packages:
       {
         integrity: sha512-EuEzTWSTAj9PA5GOAs992GzNh2dGQO52UvAbtSOMvXTxv3Criqb6IOzJUBCmEqrrXSblJIJBbFFv6zPxpreiJw==,
       }
-    dev: true
 
   /micromark-util-encode@2.0.0:
     resolution:
@@ -12689,14 +12581,12 @@ packages:
       micromark-util-types: 1.1.0
       uvu: 0.5.6
       vfile-message: 3.1.4
-    dev: true
 
   /micromark-util-html-tag-name@1.2.0:
     resolution:
       {
         integrity: sha512-VTQzcuQgFUD7yYztuQFKXT49KghjtETQ+Wv/zUjGSGBioZnkA4P1XXZPT1FHeJA6RwRXSF47yvJ1tsJdoxwO+Q==,
       }
-    dev: true
 
   /micromark-util-html-tag-name@2.0.0:
     resolution:
@@ -12712,7 +12602,6 @@ packages:
       }
     dependencies:
       micromark-util-symbol: 1.1.0
-    dev: true
 
   /micromark-util-normalize-identifier@2.0.0:
     resolution:
@@ -12730,7 +12619,6 @@ packages:
       }
     dependencies:
       micromark-util-types: 1.1.0
-    dev: true
 
   /micromark-util-resolve-all@2.0.0:
     resolution:
@@ -12750,7 +12638,6 @@ packages:
       micromark-util-character: 1.2.0
       micromark-util-encode: 1.1.0
       micromark-util-symbol: 1.1.0
-    dev: true
 
   /micromark-util-sanitize-uri@2.0.0:
     resolution:
@@ -12773,7 +12660,6 @@ packages:
       micromark-util-symbol: 1.1.0
       micromark-util-types: 1.1.0
       uvu: 0.5.6
-    dev: true
 
   /micromark-util-subtokenize@2.0.1:
     resolution:
@@ -12792,7 +12678,6 @@ packages:
       {
         integrity: sha512-uEjpEYY6KMs1g7QfJ2eX1SQEV+ZT4rUD3UcF6l57acZvLNK7PBZL+ty82Z1qhK1/yXIY4bdx04FKMgR0g4IAag==,
       }
-    dev: true
 
   /micromark-util-symbol@2.0.0:
     resolution:
@@ -12806,7 +12691,6 @@ packages:
       {
         integrity: sha512-ukRBgie8TIAcacscVHSiddHjO4k/q3pnedmzMQ4iwDcK0FtFCohKOlFbaOL/mPgfnPsL3C1ZyxJa4sbWrBl3jg==,
       }
-    dev: true
 
   /micromark-util-types@2.0.0:
     resolution:
@@ -12840,7 +12724,6 @@ packages:
       uvu: 0.5.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /micromark@4.0.0:
     resolution:
@@ -13342,7 +13225,6 @@ packages:
         integrity: sha512-LVwQ1J6icSJ2buccnLCWdDtxxTwB0HXoB7PLPap4u90T9pAs2HqE35DpV6nV/6O1aVEO4OzwDeE2gLCUCkoGWQ==,
       }
     engines: { node: '>= 14.17.0' }
-    dev: true
 
   /optionator@0.9.3:
     resolution:
@@ -13524,7 +13406,6 @@ packages:
       is-alphanumerical: 2.0.1
       is-decimal: 2.0.1
       is-hexadecimal: 2.0.1
-    dev: true
 
   /parse-json@5.2.0:
     resolution:
@@ -13552,7 +13433,6 @@ packages:
       {
         integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==,
       }
-    dev: true
 
   /pascal-case@3.1.2:
     resolution:
@@ -14070,7 +13950,6 @@ packages:
       {
         integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==,
       }
-    dev: true
 
   /proto3-json-serializer@2.0.1:
     resolution:
@@ -14285,7 +14164,6 @@ packages:
       '@types/hast': 2.3.10
       hast-util-to-html: 8.0.4
       unified: 10.1.2
-    dev: true
 
   /remark-frontmatter@4.0.1:
     resolution:
@@ -14297,7 +14175,6 @@ packages:
       mdast-util-frontmatter: 1.0.1
       micromark-extension-frontmatter: 1.1.1
       unified: 10.1.2
-    dev: true
 
   /remark-mdx-frontmatter@1.1.1:
     resolution:
@@ -14310,7 +14187,6 @@ packages:
       estree-util-value-to-estree: 1.3.0
       js-yaml: 4.1.0
       toml: 3.0.0
-    dev: true
 
   /remark-mdx@2.3.0:
     resolution:
@@ -14322,7 +14198,6 @@ packages:
       micromark-extension-mdxjs: 1.0.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /remark-parse@10.0.2:
     resolution:
@@ -14335,7 +14210,6 @@ packages:
       unified: 10.1.2
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /remark-parse@11.0.0:
     resolution:
@@ -14361,7 +14235,6 @@ packages:
       '@types/mdast': 3.0.15
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
-    dev: true
 
   /remark-stringify@11.0.0:
     resolution:
@@ -14394,7 +14267,6 @@ packages:
         integrity: sha512-PV0dzCYDNfRi1jCDbJzpW7jNNDRuCOG/jI5ctQcGKt/clZD+YcPS3yIlWuTJMmESC8aevCFmWJy5wjAFgNqN6w==,
       }
     engines: { node: '>=0.10' }
-    dev: true
 
   /require-directory@2.1.1:
     resolution:
@@ -14727,7 +14599,6 @@ packages:
     dependencies:
       extend-shallow: 2.0.1
       kind-of: 6.0.3
-    dev: true
 
   /semver@5.7.2:
     resolution:
@@ -14776,7 +14647,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /seroval@0.5.1:
     resolution:
@@ -14968,7 +14838,6 @@ packages:
     dependencies:
       buffer-from: 1.1.2
       source-map: 0.6.1
-    dev: true
 
   /source-map@0.6.1:
     resolution:
@@ -14983,14 +14852,12 @@ packages:
         integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==,
       }
     engines: { node: '>= 8' }
-    dev: true
 
   /space-separated-tokens@2.0.2:
     resolution:
       {
         integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==,
       }
-    dev: true
 
   /spawndamnit@2.0.0:
     resolution:
@@ -15050,7 +14917,6 @@ packages:
       {
         integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==,
       }
-    dev: true
 
   /stackback@0.0.2:
     resolution:
@@ -15178,7 +15044,6 @@ packages:
     dependencies:
       character-entities-html4: 2.1.0
       character-entities-legacy: 3.0.0
-    dev: true
 
   /strip-ansi@6.0.1:
     resolution:
@@ -15204,7 +15069,6 @@ packages:
         integrity: sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /strip-bom@3.0.0:
     resolution:
@@ -15286,7 +15150,6 @@ packages:
       }
     dependencies:
       inline-style-parser: 0.1.1
-    dev: true
 
   /sucrase@3.35.0:
     resolution:
@@ -15782,7 +15645,6 @@ packages:
       {
         integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==,
       }
-    dev: true
 
   /totalist@3.0.1:
     resolution:
@@ -15802,7 +15664,6 @@ packages:
       {
         integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==,
       }
-    dev: true
 
   /trim-newlines@3.0.1:
     resolution:
@@ -15882,7 +15743,6 @@ packages:
       {
         integrity: sha512-pefrkcd4lmIVR0LA49Imjf9DYLK8vtWhqBPA3Ya1ir8xCW0O2yjL9dsCVvI7pCodLC5q7smNpEtDR2yVulQxOg==,
       }
-    dev: true
 
   /tslib@1.14.1:
     resolution:
@@ -16104,7 +15964,6 @@ packages:
         integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==,
       }
     engines: { node: '>=14.16' }
-    dev: true
 
   /typed-array-buffer@1.0.0:
     resolution:
@@ -16265,7 +16124,6 @@ packages:
       is-plain-obj: 4.1.0
       trough: 2.2.0
       vfile: 5.3.7
-    dev: true
 
   /unified@11.0.4:
     resolution:
@@ -16287,7 +16145,6 @@ packages:
       {
         integrity: sha512-qF72kLmPxAw0oN2fwpWIqbXAVyEqUzDHMsbtPvOudIlUzXYFIeQIuxXQCRCFh22B7cixvU0MG7m3MW8FTq/S+A==,
       }
-    dev: true
 
   /unist-util-is@5.2.1:
     resolution:
@@ -16296,7 +16153,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /unist-util-is@6.0.0:
     resolution:
@@ -16314,7 +16170,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /unist-util-position@4.0.4:
     resolution:
@@ -16323,7 +16178,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /unist-util-remove-position@4.0.2:
     resolution:
@@ -16333,7 +16187,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.10
       unist-util-visit: 4.1.2
-    dev: true
 
   /unist-util-stringify-position@2.0.3:
     resolution:
@@ -16351,7 +16204,6 @@ packages:
       }
     dependencies:
       '@types/unist': 2.0.10
-    dev: true
 
   /unist-util-stringify-position@4.0.0:
     resolution:
@@ -16369,7 +16221,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.10
       unist-util-is: 5.2.1
-    dev: true
 
   /unist-util-visit-parents@6.0.1:
     resolution:
@@ -16390,7 +16241,6 @@ packages:
       '@types/unist': 2.0.10
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
-    dev: true
 
   /unist-util-visit@5.0.0:
     resolution:
@@ -16541,7 +16391,6 @@ packages:
         integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==,
       }
     hasBin: true
-    dev: true
 
   /uuid@9.0.1:
     resolution:
@@ -16562,7 +16411,6 @@ packages:
       diff: 5.2.0
       kleur: 4.1.5
       sade: 1.8.1
-    dev: true
 
   /v8-compile-cache-lib@3.0.1:
     resolution:
@@ -16601,7 +16449,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.10
       vfile: 5.3.7
-    dev: true
 
   /vfile-message@2.0.4:
     resolution:
@@ -16621,7 +16468,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.10
       unist-util-stringify-position: 3.0.3
-    dev: true
 
   /vfile-message@4.0.2:
     resolution:
@@ -16642,7 +16488,6 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
-    dev: true
 
   /vfile@6.0.1:
     resolution:
@@ -16851,7 +16696,6 @@ packages:
       {
         integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==,
       }
-    dev: true
 
   /web-streams-polyfill@3.3.3:
     resolution:
@@ -17069,7 +16913,6 @@ packages:
       {
         integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==,
       }
-    dev: true
 
   /yaml@1.10.2:
     resolution:

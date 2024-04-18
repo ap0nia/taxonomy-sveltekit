@@ -1,0 +1,23 @@
+{
+  "name": "@taxonomy/vite-plugin-contentlayer",
+  "version": "0.0.0",
+  "description": "custom vite plugin for contentlayer",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ap0nia/taxonomy",
+    "directory": "packages/vite-plugin-contentlayer"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "dependencies": {
+    "@contentlayer/core": "^0.3.4",
+    "@contentlayer/utils": "^0.3.4"
+  },
+  "devDependencies": {
+    "@taxonomy/tsconfig": "workspace:^",
+    "vite": "^5.2.8"
+  }
+}

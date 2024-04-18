@@ -1,0 +1,8 @@
+{
+  "extends": ["@taxonomy/tsconfig"],
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "resolvePackageJsonExports": false,
+    "resolvePackageJsonImports": false
+  }
+}

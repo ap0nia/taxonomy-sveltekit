@@ -28,7 +28,7 @@
   This prevents layout shifts when the sheet content is part of the header.
 -->
 <Sheet.Root bind:open>
-  <header class="flex justify-center border-b">
+  <header class="flex justify-center border-b sticky top-0 z-50 bg-base-100">
     <div class="navbar max-w-7xl gap-4">
       <div class="navbar-start gap-2 w-auto">
         <Sheet.Trigger class="block sm:hidden btn btn-sm btn-ghost">

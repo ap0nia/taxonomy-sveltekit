@@ -2,6 +2,7 @@
 
 import { paraglide } from '@inlang/paraglide-js-adapter-sveltekit/vite'
 import { sveltekit } from '@sveltejs/kit/vite'
+import { contentlayer } from '@taxonomy/vite-plugin-contentlayer'
 
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
@@ -12,6 +13,7 @@ const config = defineConfig({
       project: './project.inlang',
       outdir: './src/paraglide',
     }),
+    contentlayer(),
     sveltekit(),
     Icons({
       compiler: 'svelte',

@@ -43,7 +43,7 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: 'Introduction',
-          href: '/docs',
+          href: '/documentation/index',
         },
       ],
     },
@@ -52,28 +52,28 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: 'Introduction',
-          href: '/docs/documentation',
+          href: '/documentation/introduction',
         },
         {
           title: 'Contentlayer',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Components',
-          href: '/docs/documentation/components',
+          href: '/documentation/components',
         },
         {
           title: 'Code Blocks',
-          href: '/docs/documentation/code-blocks',
+          href: '/documentation/code-blocks',
         },
         {
           title: 'Style Guide',
-          href: '/docs/documentation/style-guide',
+          href: '/documentation/style-guide',
         },
         {
           title: 'Search',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
       ],
@@ -83,17 +83,17 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: 'Introduction',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Build your own',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Writing Posts',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
       ],
@@ -103,32 +103,32 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: 'Introduction',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Layouts',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Server Components',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Authentication',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Database with Prisma',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'API Routes',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
       ],
@@ -138,22 +138,22 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: 'Introduction',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'File Structure',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Tailwind CSS',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
         {
           title: 'Typography',
-          href: '/docs/in-progress',
+          href: '/documentation/in-progress',
           disabled: true,
         },
       ],
