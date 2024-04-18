@@ -22,15 +22,17 @@
     "des": "cdk --app 'npx tsx tools/cdk/index.ts' destroy",
     "lint:lang": "inlang lint --project project.inlang",
     "translate": "inlang machine translate --project project.inlang --force",
-    "build:content": "contentlayer build"
+    "build:content": "contentlayer build",
+    "db:push": "drizzle-kit push:sqlite"
   },
   "type": "module",
   "dependencies": {
     "@aponia.js/auth.js": "^0.5.2",
     "@aponia.js/core": "^0.5.2",
-    "@auth/core": "^0.29.0",
+    "@auth/core": "^0.28.2",
     "@google-cloud/recaptcha-enterprise": "^5.6.0",
     "@libsql/client": "^0.6.0",
+    "@paralleldrive/cuid2": "^2.2.2",
     "@resvg/resvg-js": "^2.6.2",
     "@sentry/sveltekit": "^7.110.0",
     "@sinclair/typebox": "^0.32.20",
@@ -78,6 +80,7 @@
     "contentlayer": "^0.3.4",
     "daisyui": "^4.10.1",
     "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.20.14",
     "mdsvex": "^0.11.0",
     "postcss": "^8.4.38",
     "postcss-load-config": "^5.0.3",
