@@ -15,11 +15,11 @@ const envSchema = Type.Object({
   GOOGLE_SECRET: Type.String(),
   GOOGLE_REFRESH_TOKEN: Type.String(),
   GOOGLE_EMAIL: Type.String(),
+  GOOGLE_CREDENTIALS_JSON: Type.String(),
   GITHUB_ID: Type.String(),
   GITHUB_SECRET: Type.String(),
   GITHUB_ID_PRODUCTION: Type.String(),
   GITHUB_SECRET_PRODUCTION: Type.String(),
-  GOOGLE_CREDENTIALS_JSON: Type.String(),
 })
 
 const cleanEnv = Value.Clean(envSchema, { ...process.env })
